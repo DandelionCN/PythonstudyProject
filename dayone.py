@@ -133,3 +133,18 @@ with open(r'C:\Users\admin\Desktop\记录.txt') as f:
 s3='------------hell world===============  '
 print((s3.strip()).strip('-='))
 print((s3.strip()).strip('='))
+
+
+#format()函数用于字符串格式化对齐
+#函数 format() 同样可以用来很容易的对齐字符串。 你要做的就是使用 <,> 或者 ^ 字符后面紧跟一个指定的宽度
+text='hell world!'
+print(format(text,'>15'))
+print(format(text,'<15'))
+print(format(text,'^15'))
+
+
+#2.14 合并拼接字符串
+#join() function
+parts = ['Is', 'Chicago', 'Not', 'Chicago?']
+print('*'.join(parts))
+
