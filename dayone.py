@@ -82,14 +82,54 @@ print(filenames)
 #     else:pass
 
 from urllib.request import urlopen
-def read_data(strname):
-    if strname.startswith(('http','https','ftp')):
-        return urlopen(strname).read()
+def read_data(name):
+    if name.startswith(('http:','https:','ftp:')):
+        return urlopen(name).read()
     else:
-        with open(strname) as f:
+        with open(name) as f:
             return f.read()
 
 
 url='http://python3-cookbook.readthedocs.io/zh_CN/latest/c02/p02_match_text_at_start_end.html'
 print(read_data(url))
 
+#使用正则表达式实现匹配
+import re
+re.match('http:|https:|ftp:',url)
+print(re.match('http:|https:|ftp:',url))
+
+#字符串搜索和替换
+#对于简单的字面模式，直接使用 str.replace() 方法即可
+text = 'yeah, but no, but yeah, but no, but yeah'
+print(text)
+print(text.replace('yeah','yep'))
+
+#对于复杂的模式，请使用 re 模块中的 sub() 函数。 为了说明这个，假设你想将形式为 11/27/2012 的日期字符串改成 2012-11-27 。
+text = 'Today is 11/27/2012. PyCon starts 3/13/2013.'
+print(text)
+import re
+print(re.sub(r'(\d+)/(\d+)/(\d+)',r'\3-\1-\2',text))
+
+#删除字符串中不需要的字符
+#strip() 方法能用于删除开始或结尾的字符。 lstrip() 和 rstrip() 分别从左和从右执行删除操作。
+#  默认情况下，这些方法会去除空白字符，但是你也可以指定其他字符。比如：
+s = ' hello world! \n'
+print('origenal string s is :',s)
+print('striped string s is:',s.strip())
+print('Left striped string s is:',s.lstrip())
+print('Right striped string s is:',s.rstrip())
+
+
+s2 = 'hello      world! \n'
+import re
+print(re.sub(r'\s+',' ',s2))
+
+#通常情况下你想将字符串 strip 操作和其他迭代操作相结合，比如从文件中读取多行数据。 如果是这样的话，那么生成器表达式就可以大显身手了。
+with open(r'C:\Users\admin\Desktop\记录.txt') as f:
+    lines = (line.strip() for line in f)
+    for line in lines:
+        print(line)
+
+s3='------------hell world===============  '
+print((s3.strip()).strip('-='))
+print((s3.strip()).strip('='))
