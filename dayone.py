@@ -1,3 +1,6 @@
+
+#####----获取最大或最小的N个元素---------------------------
+
 from collections import deque
 q=deque()
 q.append('welcome to the sea')
@@ -37,3 +40,28 @@ print(heapq.heappop(heap))
 print(heap)
 print(sorted(heap)[:3])
 print(sorted(heap)[-3:])
+
+#####----使用多个界定符分割字符串---------------------------
+#当你使用 re.split() 函数时候，需要特别注意的是正则表达式中是否包含一个括号捕获分组。
+# 如果使用了捕获分组，那么被匹配的文本也将出现在结果列表中。
+# Notice the difference betwean the '[]'and '()' 正则表达式
+#ues the '[]' 代表可选项，或关系，，分隔符好直接罗列即可；
+#ues the '（）' 分割符之间需要使用‘|’，进行分割；
+line = 'asdf fjdk; afed, fjek,asdf, foo'
+line2 = 'sdfh, shdi_etfdgf;sdf   follshe'
+import re
+fields=re.split(r'[;,\s]\s*',line)
+print(fields)
+
+fields2 = re.split(r'(;|,|\s)\s*', line)
+print(fields2)
+
+split_test=re.split(r'[,;\s_]\s*',line2)
+print(split_test)
+split_test2=re.split(r'(,|;|\s|_)\s*',line2)
+print(split_test2)
+
+##2.2 字符串开头或结尾匹配
+#检查字符串开头或结尾的一个简单方法是使用 str.startswith() 或者是 str.endswith() 方法。
+#如果你想检查多种匹配可能，只需要将所有的匹配项放入到一个元组中去， 然后传给 startswith() 或者 endswith() 方法：
+
