@@ -64,4 +64,32 @@ print(split_test2)
 ##2.2 字符串开头或结尾匹配
 #检查字符串开头或结尾的一个简单方法是使用 str.startswith() 或者是 str.endswith() 方法。
 #如果你想检查多种匹配可能，只需要将所有的匹配项放入到一个元组中去， 然后传给 startswith() 或者 endswith() 方法：
+filename='http://www.python.org'
+start=filename.startswith('http')
+end=filename.endswith('.org')
+print(start)
+print(end)
+
+#如果你想检查多种匹配可能，只需要将所有的匹配项放入到一个元组中去， 然后传给 startswith() 或者 endswith() 方法：
+import os
+paths=''
+filenames=os.listdir('.')
+print(filenames)
+
+# for name in filenames:
+#     if name.endswith(('.c', '.h')):
+#         print(name)
+#     else:pass
+
+from urllib.request import urlopen
+def read_data(strname):
+    if strname.startswith(('http','https','ftp')):
+        return urlopen(strname).read()
+    else:
+        with open(strname) as f:
+            return f.read()
+
+
+url='http://python3-cookbook.readthedocs.io/zh_CN/latest/c02/p02_match_text_at_start_end.html'
+print(read_data(url))
 
