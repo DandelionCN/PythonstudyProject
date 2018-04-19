@@ -36,3 +36,11 @@ print('X in bin format is :',format(x,'b'))
 print('X in oct format is :',format(x,'o'))
 
 print('X in hex format is:',int('11100010101010',2))
+
+#分数运算Fraction（a,b）
+from fractions import Fraction
+a=Fraction(5,4)
+b=Fraction(7,16)
+print('a+b=',a+b)
+print('a*b=',a*b)
+
