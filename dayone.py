@@ -148,3 +148,9 @@ print(format(text,'^15'))
 parts = ['Is', 'Chicago', 'Not', 'Chicago?']
 print('*'.join(parts))
 
+
+#以指定列宽格式化字符串,使用textwrap.fill()函数对字符串按指定长度进行分割；
+
+import textwrap
+text_test='113.3445679'
+print(textwrap.fill(text_test,5))
