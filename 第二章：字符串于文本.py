@@ -154,3 +154,8 @@ print('*'.join(parts))
 import textwrap
 text_test='113.3445679'
 print(textwrap.fill(text_test,5))
+
+#字符串分割str.split（）函数
+data = 'Hello ,World!,sdfdsf '
+print(data.split(','))
+

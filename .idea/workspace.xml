@@ -11,11 +11,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="dayone.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dayone.py">
+      <file leaf-file-name="第三章：数字日期和时间.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/第三章：数字日期和时间.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+            <state relative-caret-position="285">
+              <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -39,6 +39,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/dayone.py" />
+        <option value="$PROJECT_DIR$/第三章：数字日期和时间.py" />
       </list>
     </option>
   </component>
@@ -86,7 +87,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.第三章：数字日期和时间">
+    <configuration name="第三章：数字日期和时间" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="PythonstudyProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/第三章：数字日期和时间.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration name="dayone" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="PythonstudyProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -99,14 +118,19 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/dayone.py" />
+      <option name="SCRIPT_NAME" value="D:\PythonstudyProject\第二章：字符串于文本.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <list>
+      <item itemvalue="Python.dayone" />
+      <item itemvalue="Python.第三章：数字日期和时间" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.第三章：数字日期和时间" />
         <item itemvalue="Python.dayone" />
       </list>
     </recent_temporary>
@@ -162,7 +186,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/dayone.py">
+    <entry file="file://$PROJECT_DIR$/第二章：字符串于文本.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
           <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
@@ -204,10 +228,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dayone.py">
+    <entry file="file://$PROJECT_DIR$/第二章：字符串于文本.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="155" column="18" selection-start-line="155" selection-start-column="18" selection-end-line="155" selection-end-column="18" />
+        <state relative-caret-position="590">
+          <caret line="75" column="19" lean-forward="true" selection-start-line="75" selection-start-column="19" selection-end-line="75" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/第三章：数字日期和时间.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
