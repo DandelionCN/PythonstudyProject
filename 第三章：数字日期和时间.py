@@ -12,9 +12,9 @@ print(round(a,-1))
 print(round(a,-2))
 print(round(a,-5))
 
-x=1.23456
-print(format(x,'0.3f'))
-print('Value is {:0.3f}'.format(x))
+x1=1.23456
+print(format(x1,'0.3f'))
+print('Value is {:0.3f}'.format(x1))
 
 
 #高精度的浮点数运算Decimal(notcie the Capital Letter)
@@ -26,7 +26,13 @@ print('a/b={:0.3f}'.format(a/b))
 print('a/b={:0,.3f}'.format(a/b))
 print('a/b={:0.3e}'.format(a/b))
 
+#二八十六进制整数
+x = 1234
+print('X in bin format is:',bin(x))
+print('X in oct format is:',oct(x))
+print('X in hex format is:',hex(x))
 
+print('X in bin format is :',format(x,'b'))
+print('X in oct format is :',format(x,'o'))
 
-
-
+print('X in hex format is:',int('11100010101010',2))
