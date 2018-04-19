@@ -17,3 +17,16 @@ print(format(x,'0.3f'))
 print('Value is {:0.3f}'.format(x))
 
 
+#高精度的浮点数运算Decimal(notcie the Capital Letter)
+from decimal import Decimal
+a=Decimal('365000')
+b=Decimal('12')
+print('a/b=',a/b)
+print('a/b={:0.3f}'.format(a/b))
+print('a/b={:0,.3f}'.format(a/b))
+print('a/b={:0.3e}'.format(a/b))
+
+
+
+
+
