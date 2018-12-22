@@ -62,7 +62,7 @@ if __name__ == "__main__":
     print('==========================================================================')
     print('Better Tool,Better Future! Welcome to use CPE_LMT_CSVLog_Process tool!')
     print('--------------------------------------------------------------------------')
-    print('Author:Dandelion|Contact:490359939@qq.com|All rights reserved!' )
+    print('Author:DandelionCN|Contact:*****@qq.com|All rights reserved!' )
     print('--------------------------------------------------------------------------')
     print('Attention Please:Make sure your file directory has no Chinese Characters!')
     data_path = r"C:\Users\admin\Desktop\tt"  # 指定数据源存放路径
