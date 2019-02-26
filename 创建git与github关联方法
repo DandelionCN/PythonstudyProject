@@ -1,0 +1,19 @@
+# git basic use method
+
+git add . "." #添加所有文件到仓库中
+git add "file name" #添加指定文件到仓库中
+git commit -m "提交备注信息说明" #提交备注信息
+git push -u origin master #首次提交数据到远程仓库的origin中
+git push origin master #提交数据到远程仓库的origin中
+git pull origin #从仓库获取跟新到本地
+
+添加github仓库关联方法
+git config --global  --list  #检查配置信息
+1、获取远程仓库
+git clone git://github.com/DandelionCN/PythonstudyProject
+2、git config --golbal user.name "DandelionCN"
+3、git config --global user.email "25096281+DandelionCN@users.noreply.github.com"
+生成秘钥
+4、ssh-keygen -t rsa -C "25096281+DandelionCN@users.noreply.github.com"
+5、把秘钥中的会生成2个名为id_rsa和id_rsa.pub的文件，id_rsa为私人秘钥，id_rsa_pub为对外公共秘钥；
+6、登录github账户，将本地生成的公共秘钥的内容复制粘贴到github账户setting下的SSH and GPG keys项中；
