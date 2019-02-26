@@ -1,3 +1,4 @@
+# git basic use method
 git add . "." #添加所有文件到仓库中
 git add "file name" #添加指定文件到仓库中
 git commit -m "提交备注信息说明" #提交备注信息
