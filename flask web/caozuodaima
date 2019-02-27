@@ -1,0 +1,17 @@
+https://www.shiyanlou.com/courses/29
+
+sudo apt-get install python-virtualenv
+virtualenv -p /usr/bin/python3 venv
+. venv/bin/activate
+
+pip3 install flask 
+
+export FLASK_APP=hello.py
+export FLASK_ENV=development
+flask run
+
+http://127.0.0.1:5000/
+http://127.0.0.1:5000/hello
+
+
+flask run
