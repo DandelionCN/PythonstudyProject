@@ -1,0 +1,68 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Aug  3 16:36:16 2018
+
+@author: admin
+"""
+import pandas as pd
+import os
+
+def make_uelog_result_savedir(sourcedata_path):
+    uelog_result_savedir = os.path.join(sourcedata_path, "Result")
+    pathisExists = os.path.exists(uelog_result_savedir)
+    if not pathisExists:
+        os.mkdir(os.path.join(sourcedata_path, "Result"))
+        print("已新建结果数据保存路径为：\n{}".format(uelog_result_savedir))
+    else:
+        print("结果数据保存路径已经存在，路径为：\n{}".format(uelog_result_savedir))
+    return uelog_result_savedir
+
+
+
+
+#file_path=r"D:\system study\py\testlog\ue1KPILog20180731110133.csv"
+file_path=(input('Please input the source file with full name:\n')).strip()[1:-1]
+
+
+
+df_data=pd.read_csv(file_path,sep=',',header=0)
+#cols=df_data.columns.values
+#print(cols)
+#字段计算公式制定
+df_data['CSIrsrp_Average']=df_data.apply(lambda x:(x['CSIRsrp_1']+x['CSIRsrp_2']+x['CSIRsrp_3']+x['CSIRsrp_4'])/4,axis=1)
+
+df_data['CSISinr_Average']=df_data.apply(lambda x:(x['CSISinr_1']+x['CSISinr_2']+x['CSISinr_3']+x['CSISinr_4'])/4,axis=1)
+
+df_data['SSBlockSinr_Average']=df_data.apply(lambda x:(x['SSBlockSinr_1']+x['SSBlockSinr_2']+x['SSBlockSinr_3']+x['SSBlockSinr_4'])/4,axis=1)
+
+df_data['ULThroughput_Total']=df_data.apply(lambda x:(x['ULThroughput_1']+x['ULThroughput_2'])/1024,axis=1)
+
+df_data['DLThroughput_Total']=df_data.apply(lambda x:(x['DLThroughput_1']+x['DLThroughput_2']+x['DLThroughput_3']+x['DLThroughput_4'])/1024,axis=1)
+
+df_data['NCell1SSBRsrp_Average']=df_data.apply(lambda x:(x['NCell1SSBRsrp_1']+x['NCell1SSBRsrp_2']+x['NCell1SSBRsrp_3']+x['NCell1SSBRsrp_4']+x['NCell1SSBRsrp_5']+x['NCell1SSBRsrp_6']+x['NCell1SSBRsrp_7']+x['NCell1SSBRsrp_8'])/8,axis=1)
+
+df_data['NCell2SSBRsrp_Average']=df_data.apply(lambda x:(x['NCell2SSBRsrp_1']+x['NCell2SSBRsrp_2']+x['NCell2SSBRsrp_3']+x['NCell2SSBRsrp_4']+x['NCell2SSBRsrp_5']+x['NCell2SSBRsrp_6']+x['NCell2SSBRsrp_7']+x['NCell2SSBRsrp_8'])/8,axis=1)
+
+df_data['ULMcs_Average']=df_data.apply(lambda x:(x['ULMcs_1']+x['ULMcs_2'])/2,axis=1)
+
+df_data['PuschBler_Average']=df_data.apply(lambda x:(x['PuschBler_1']+x['PuschBler_2'])/2,axis=1)
+
+df_data['DLMcs_Average']=df_data.apply(lambda x:(x['DLMcs_1']+x['DLMcs_2']+x['DLMcs_3']+x['DLMcs_4'])/2,axis=1)
+
+df_data['PdschBler_Average']=df_data.apply(lambda x:(x['PdschBler_1']+x['PdschBler_2']+x['PdschBler_3']+x['PdschBler_4'])/4,axis=1)
+
+#需求字段提取及输出
+#output_data=df_data[['Time','GPSTime','GPSLong','GPSLA','GPSHeigh','Ue Id','Pci','ULRbNum','TxPwr','CRNTI','DLRbNum','MIMOMod','CQI','PbchCrcErrorNum','PbchCrcSuccNum','PbchCrcSucc_Scale','OptimalAvgRSRP','CSIrsrp_Average','CSISinr_Average','SSBlockSinr_Average','ULMcs_Average','PuschBler_Average','ULThroughput_Total','DLMcs_Average','PdschBler_Average','DLThroughput_Total','NCell1Pci','NCell1SSBRsrp_Average'
+#,'NCell2Pci','NCell2SSBRsrp_Average']]
+
+#output_data=df_data[['Time','GPSTime','GPSLong','GPSLA','CSIrsrp_Average','CSISinr_Average','SSBlockSinr_Average','ULThroughput_Total','DLThroughput_Total','Ue Id','Pci','ULRbNum','TxPwr','CRNTI','DLRbNum','MIMOMod','CQI','PbchCrcErrorNum','PbchCrcSuccNum','PbchCrcSucc_Scale','OptimalAvgRSRP','ULMcs_Average','PuschBler_Average','DLMcs_Average','PdschBler_Average','NCell1Pci','NCell1SSBRsrp_Average','NCell2Pci','NCell2SSBRsrp_Average','GPSHeigh']]
+
+output_data=df_data[['Time','Ue Id','GPSLong','GPSLA','CSIrsrp_Average','CSISinr_Average','SSBlockSinr_Average','ULThroughput_Total','DLThroughput_Total','Pci','ULRbNum','CRNTI','DLRbNum','MIMOMod','CQI','PbchCrcErrorNum','PbchCrcSuccNum','PbchCrcSucc_Scale','OptimalAvgRSRP','ULMcs_Average','PuschBler_Average','DLMcs_Average','PdschBler_Average','NCell1Pci','NCell1SSBRsrp_Average','NCell2Pci','NCell2SSBRsrp_Average','GPSHeigh']]
+
+
+print(output_data.head(3))
+save_path=make_uelog_result_savedir(os.path.dirname(file_path))
+savefile_fullname=os.path.join(save_path,(os.path.basename(file_path)[:-4])+'_Result.csv')
+output_data.to_csv(savefile_fullname,sep=',',header=True,index=False)
+
+

@@ -1,0 +1,248 @@
+1
+00:00:00,369 --> 00:00:03,467
+E se você quisesse deixar
+o primeiro parágrafo em negrito,
+
+2
+00:00:03,501 --> 00:00:05,050
+com uma fonte maior,
+
+3
+00:00:05,084 --> 00:00:08,857
+e os dois últimos parágrafos
+com uma fonte em itálico?
+
+4
+00:00:08,891 --> 00:00:13,177
+Para mudar a fonte e o estilo
+da fonte, você precisará do CSS.
+
+5
+00:00:13,211 --> 00:00:17,639
+Mas ainda não estamos prontos
+para adicionar estilização CSS.
+
+6
+00:00:17,673 --> 00:00:22,392
+Será preciso diferenciar o primeiro
+parágrafo dos outros parágrafos.
+
+7
+00:00:22,426 --> 00:00:27,830
+HTML tem atributos específicos
+para diferenciar elementos:
+
+8
+00:00:27,864 --> 00:00:31,122
+o atributo de ID
+e o atributo de classe.
+
+9
+00:00:31,156 --> 00:00:33,893
+IDs identificam unicamente
+
+10
+00:00:33,927 --> 00:00:35,737
+um pedaço de conteúdo.
+
+11
+00:00:35,771 --> 00:00:39,801
+Por exemplo, posso usar um ID
+no primeiro parágrafo
+
+12
+00:00:39,835 --> 00:00:42,956
+para adicionar id="p_top".
+
+13
+00:00:42,990 --> 00:00:44,919
+Como veremos
+posteriormente nesta aula,
+
+14
+00:00:44,953 --> 00:00:47,198
+agora você pode selecionar
+o parágrafo p_top
+
+15
+00:00:47,232 --> 00:00:50,215
+e adicionar uma fonte em negrito
+somente a esse parágrafo.
+
+16
+00:00:50,249 --> 00:00:52,614
+Um ID é um identificador único
+
+17
+00:00:52,648 --> 00:00:56,340
+que você só deve usar
+uma vez por página HTML.
+
+18
+00:00:56,374 --> 00:00:58,524
+Você pode dar aos IDs
+o nome que quiser,
+
+19
+00:00:58,558 --> 00:01:00,973
+mas você só deve usar
+o nome uma vez,
+
+20
+00:01:01,007 --> 00:01:04,515
+e a tag só deve ter um ID.
+
+21
+00:01:04,549 --> 00:01:08,928
+Logo, a tag de parágrafo
+só pode ter aquele ID p_top.
+
+22
+00:01:08,962 --> 00:01:12,329
+Vou adicionar alguns outros IDs
+para reforçar isso.
+
+23
+00:01:12,363 --> 00:01:13,774
+Por exemplo,
+
+24
+00:01:13,808 --> 00:01:16,749
+o parágrafo do meio
+pode ser p_middle,
+
+25
+00:01:16,783 --> 00:01:19,089
+e o último, p_bottom.
+
+26
+00:01:19,123 --> 00:01:22,336
+Também vou adicionar IDs
+às tags div,
+
+27
+00:01:22,370 --> 00:01:24,738
+como id="links_section"
+
+28
+00:01:24,772 --> 00:01:27,804
+e id="paragraphs_section".
+
+29
+00:01:27,838 --> 00:01:30,840
+Como eu disse,
+qualquer tag pode ter IDs,
+
+30
+00:01:30,874 --> 00:01:33,663
+cada elemento pode ter um ID
+
+31
+00:01:33,697 --> 00:01:36,384
+e cada nome de ID
+deve ser único.
+
+32
+00:01:36,418 --> 00:01:39,884
+A ideia é que você está
+separando o conteúdo
+
+33
+00:01:39,918 --> 00:01:42,328
+para estilizações CSS
+diferentes.
+
+34
+00:01:42,362 --> 00:01:44,316
+Classes, por outro lado,
+
+35
+00:01:44,350 --> 00:01:47,542
+agrupam vários pedaços
+de conteúdo.
+
+36
+00:01:47,576 --> 00:01:49,738
+Por exemplo, eu poderia
+adicionar uma classe
+
+37
+00:01:49,772 --> 00:01:53,254
+a esses dois últimos parágrafos
+chamada "italic_text",
+
+38
+00:01:53,287 --> 00:01:56,907
+indicando que vou estilizar
+esses dois parágrafos
+
+39
+00:01:56,941 --> 00:01:58,674
+com uma fonte em itálico.
+
+40
+00:01:58,708 --> 00:02:00,931
+Você pode dar o nome que quiser
+a uma classe,
+
+41
+00:02:00,965 --> 00:02:05,032
+e usar o nome de uma classe
+várias vezes em um documento HTML
+
+42
+00:02:05,066 --> 00:02:08,160
+para agrupar
+pedaços de conteúdo.
+
+43
+00:02:08,194 --> 00:02:11,345
+Um elemento pode até ter
+mais de uma classe.
+
+44
+00:02:11,379 --> 00:02:14,433
+Eu poderia adicionar outra classe
+chamada "green_text",
+
+45
+00:02:14,467 --> 00:02:18,675
+indicando que vou colocar
+o último parágrafo em verde.
+
+46
+00:02:18,709 --> 00:02:21,752
+Eu poderia adicionar a mesma classe
+green_text a um link.
+
+47
+00:02:21,786 --> 00:02:23,563
+Adicionar IDs e classes
+
+48
+00:02:23,597 --> 00:02:27,354
+lhe dará mais controle sobre
+a estilização CSS do seu site.
+
+49
+00:02:27,388 --> 00:02:29,660
+Eles ajudam a adicionar
+estilo às suas páginas
+
+50
+00:02:29,694 --> 00:02:32,406
+de forma lógica e organizada.
+
+51
+00:02:32,440 --> 00:02:33,849
+No próximo exercício,
+
+52
+00:02:33,883 --> 00:02:36,566
+você vai praticar
+adicionar tags div e span,
+
+53
+00:02:36,600 --> 00:02:38,832
+bem como usar classes e IDs.
+

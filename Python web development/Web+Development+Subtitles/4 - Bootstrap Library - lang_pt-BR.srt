@@ -1,0 +1,1062 @@
+1
+00:00:00,495 --> 00:00:03,099
+Assim como o Python
+tem bibliotecas
+
+2
+00:00:03,132 --> 00:00:05,591
+que deixam o desenvolvimento
+em Python mais fácil,
+
+3
+00:00:05,624 --> 00:00:08,802
+há bibliotecas construídas
+em CSS e JavaScript
+
+4
+00:00:08,835 --> 00:00:11,278
+que deixam o desenvolvimento web
+muito mais fácil.
+
+5
+00:00:11,311 --> 00:00:14,576
+A partir de agora, na aula,
+você só vai precisar escrever HTML,
+
+6
+00:00:14,609 --> 00:00:17,214
+Python e um pouco
+de JavaScript.
+
+7
+00:00:17,247 --> 00:00:21,227
+Mas por trás das cenas,
+as bibliotecas vão cuidar do CSS
+
+8
+00:00:21,260 --> 00:00:23,297
+e da maior parte
+do JavaScript para você.
+
+9
+00:00:23,330 --> 00:00:25,570
+Primeiro, vamos lembrar
+do objetivo.
+
+10
+00:00:25,603 --> 00:00:28,495
+Você quer um front-end
+com essa aparência.
+
+11
+00:00:28,528 --> 00:00:31,890
+Nesse vídeo,
+farei esse front-end
+
+12
+00:00:31,924 --> 00:00:34,579
+para você ver como eu fiz,
+
+13
+00:00:34,612 --> 00:00:37,600
+e então você pode
+praticar no exercício.
+
+14
+00:00:37,633 --> 00:00:42,386
+Por enquanto, nesse vídeo, vou usar
+só imagens nas visualizações,
+
+15
+00:00:42,419 --> 00:00:47,524
+em vez das visualizações HTML
+que você fará mais adiante na aula.
+
+16
+00:00:47,557 --> 00:00:51,304
+Para fazer esse front-end,
+eu uso a biblioteca Bootstrap.
+
+17
+00:00:51,337 --> 00:00:53,750
+Essa é a página inicial
+do Bootstrap.
+
+18
+00:00:53,783 --> 00:00:56,634
+A documentação dele
+é muito boa.
+
+19
+00:00:56,667 --> 00:01:00,175
+Há muitos exemplos,
+e cada um vem com um código.
+
+20
+00:01:00,208 --> 00:01:05,019
+Em geral, você pode só copiar
+e colar o código de exemplo do site
+
+21
+00:01:05,052 --> 00:01:07,966
+e então mudar o conteúdo
+para se adequar à sua necessidade.
+
+22
+00:01:07,999 --> 00:01:09,920
+É exatamente isso
+que vou fazer.
+
+23
+00:01:09,953 --> 00:01:13,960
+Voltando à página inicial deles,
+clico no botão Começar.
+
+24
+00:01:13,993 --> 00:01:17,832
+Aqui nessa página
+há um template
+
+25
+00:01:17,865 --> 00:01:20,765
+que você pode copiar e colar
+para começar.
+
+26
+00:01:21,109 --> 00:01:23,150
+É exatamente o que vou fazer.
+
+27
+00:01:23,183 --> 00:01:27,005
+Vou copiar e colar
+o template do código inicial.
+
+28
+00:01:27,038 --> 00:01:31,099
+Até agora, não parece muita coisa.
+Só diz: "Olá, mundo!"
+
+29
+00:01:31,518 --> 00:01:34,074
+Mas deixe-me explicar
+o que é esse código todo.
+
+30
+00:01:34,302 --> 00:01:38,890
+Primeiro, você tem uma tag doctype,
+como vimos antes,
+
+31
+00:01:39,279 --> 00:01:42,217
+e então a tag HTML,
+que aqui especifica
+
+32
+00:01:42,250 --> 00:01:44,219
+que o idioma do site
+é o inglês.
+
+33
+00:01:44,252 --> 00:01:50,079
+Na tag head, temos coisas
+como meta tags e depois links.
+
+34
+00:01:50,112 --> 00:01:53,789
+A primeira meta tag
+só notifica o navegador
+
+35
+00:01:53,822 --> 00:01:56,313
+de que o conjunto
+de caracteres é o utf-8,
+
+36
+00:01:56,346 --> 00:01:59,754
+e a meta tag viewport
+serve para
+
+37
+00:01:59,788 --> 00:02:03,447
+diminuir e expandir o conteúdo
+
+38
+00:02:03,480 --> 00:02:05,500
+para web ou para mobile.
+
+39
+00:02:05,533 --> 00:02:09,875
+Depois, há um link
+para a biblioteca CSS do Bootstrap,
+
+40
+00:02:09,908 --> 00:02:11,849
+e então temos o título
+"Olá, mundo!",
+
+41
+00:02:11,882 --> 00:02:15,750
+então a tag body começa,
+onde vai a maior parte do seu HTML.
+
+42
+00:02:15,783 --> 00:02:20,175
+E temos os links para todos
+os scripts JavaScript,
+
+43
+00:02:20,208 --> 00:02:23,990
+e esses basicamente
+são links para o jQuery.
+
+44
+00:02:24,023 --> 00:02:28,159
+O Bootstrap usa jQuery
+para algumas de suas animações.
+
+45
+00:02:28,192 --> 00:02:31,173
+O truque essencial
+para usar o Bootstrap
+
+46
+00:02:31,206 --> 00:02:36,729
+é que a tela é dividida
+em linhas invisíveis e 12 colunas.
+
+47
+00:02:36,762 --> 00:02:39,152
+Você pode ter
+quantas linhas quiser.
+
+48
+00:02:39,185 --> 00:02:42,422
+Nos bastidores,
+o Bootstrap vai usar o CSS
+
+49
+00:02:42,455 --> 00:02:44,442
+para fazer o layout acontecer
+para você,
+
+50
+00:02:44,475 --> 00:02:48,277
+e você só precisa
+especificar IDs e classes.
+
+51
+00:02:48,310 --> 00:02:53,625
+Tudo isso vem bem explícito
+na documentação do Bootstrap.
+
+52
+00:02:53,658 --> 00:02:59,129
+Vou mostrar um exemplo rápido
+de como são essas linhas e colunas.
+
+53
+00:02:59,162 --> 00:03:02,249
+Vou apagar esse "Olá, mundo!"
+
+54
+00:03:02,282 --> 00:03:03,799
+e então vou adicionar um div
+
+55
+00:03:03,832 --> 00:03:08,559
+e dar a ele a classe row,
+e fechá-lo.
+
+56
+00:03:08,942 --> 00:03:13,310
+Certo. Dentro dessa linha,
+vou fazer uma classe
+
+57
+00:03:13,344 --> 00:03:17,960
+chamada "column-1", ou col-1,
+
+58
+00:03:17,993 --> 00:03:20,270
+e então fechar a tag.
+
+59
+00:03:20,303 --> 00:03:23,370
+Vou só escrever C1 aqui.
+
+60
+00:03:23,403 --> 00:03:26,109
+Temos essa coluna, C1,
+
+61
+00:03:26,142 --> 00:03:30,474
+e vou copiar e colar
+para termos 12 delas.
+
+62
+00:03:30,507 --> 00:03:34,481
+Com sorte, isso deixa claro
+que essa linha é dividida
+
+63
+00:03:34,514 --> 00:03:36,969
+em 12 seções
+espaçadas igualmente.
+
+64
+00:03:37,002 --> 00:03:40,520
+Agora vou criar outra linha
+e copiar tudo novamente.
+
+65
+00:03:40,553 --> 00:03:45,420
+Agora tenho uma segunda linha
+com 12 colunas espaçadas igualmente.
+
+66
+00:03:45,453 --> 00:03:50,455
+Temos 12 divisões para usar,
+mas você não precisa usar as 12.
+
+67
+00:03:50,904 --> 00:03:54,916
+Por exemplo, posso dizer
+que a primeira coluna usa só 4,
+
+68
+00:03:54,949 --> 00:03:59,019
+e a próxima usa 8.
+Então vou apagar o resto.
+
+69
+00:03:59,052 --> 00:04:03,421
+Agora você tem uma linha que tem
+uma coluna com 4 espaços,
+
+70
+00:04:03,454 --> 00:04:05,502
+e uma coluna com 8 espaços.
+
+71
+00:04:05,884 --> 00:04:08,337
+Para a próxima,
+apenas dando outro exemplo,
+
+72
+00:04:08,370 --> 00:04:14,280
+vou colocar 7. Na próxima, 5.
+Tudo ainda soma 12 divisões,
+
+73
+00:04:14,313 --> 00:04:18,874
+mas você pode ver aqui na direita
+que a primeira parte tem 7 divisões
+
+74
+00:04:18,907 --> 00:04:20,905
+e a segunda parte tem 5.
+
+75
+00:04:20,938 --> 00:04:26,550
+Você pode usar as linhas e colunas
+para dividir a tela como quiser.
+
+76
+00:04:26,880 --> 00:04:32,828
+Se voltar ao meu app web,
+pode ver como eu dividi.
+
+77
+00:04:32,861 --> 00:04:37,550
+Essa seção embaixo
+é só uma linha grande,
+
+78
+00:04:37,583 --> 00:04:42,323
+então dividi essa linha
+em uma coluna de largura 1
+
+79
+00:04:42,356 --> 00:04:45,540
+e outra coluna aqui
+de largura 11.
+
+80
+00:04:45,573 --> 00:04:50,323
+Então, criei outra linha
+dentro de uma coluna
+
+81
+00:04:50,357 --> 00:04:52,663
+que tem duas colunas,
+
+82
+00:04:52,696 --> 00:04:56,379
+e depois criei outra linha
+que também tem duas colunas.
+
+83
+00:04:56,412 --> 00:04:59,379
+Vou mostrar como isso
+funciona com o código também.
+
+84
+00:04:59,755 --> 00:05:04,393
+Mas vamos construir começando
+de cima, com a barra de navegação,
+
+85
+00:05:04,426 --> 00:05:05,884
+e depois descendo.
+
+86
+00:05:05,917 --> 00:05:08,930
+Voltei para a página inicial
+do Bootstrap.
+
+87
+00:05:08,963 --> 00:05:13,819
+Vou clicar em Documentação,
+e pesquisar por "navbar".
+
+88
+00:05:13,852 --> 00:05:19,115
+Nessa página, há vários exemplos
+de como fazer a barra de navegação.
+
+89
+00:05:19,148 --> 00:05:22,520
+Eu só vi essa, gostei,
+
+90
+00:05:22,554 --> 00:05:28,085
+copiei o código
+e colei no meu HTML.
+
+91
+00:05:28,762 --> 00:05:30,904
+Vou apagar tudo isso
+na parte de baixo
+
+92
+00:05:30,937 --> 00:05:33,239
+para ficar mais fácil ver
+o que estamos fazendo
+
+93
+00:05:33,272 --> 00:05:36,771
+e vou mudar o título do site
+
+94
+00:05:36,805 --> 00:05:39,310
+para Data Dashboard.
+
+95
+00:05:39,343 --> 00:05:45,165
+Essa barra de navegação é similar
+à que tenho no meu app web,
+
+96
+00:05:45,198 --> 00:05:48,530
+mas as cores são meio diferentes,
+os links também,
+
+97
+00:05:48,563 --> 00:05:51,619
+então só preciso
+mudar essas coisas.
+
+98
+00:05:51,652 --> 00:05:53,384
+Para mudar a cor, por exemplo:
+
+99
+00:05:53,417 --> 00:05:57,879
+aqui diz navbar-light
+como classe,
+
+100
+00:05:57,912 --> 00:06:00,279
+e vou mudar para navbar-dark.
+
+101
+00:06:00,312 --> 00:06:03,507
+O bg-light significa
+que o fundo é claro,
+
+102
+00:06:03,541 --> 00:06:05,764
+vou mudar para fundo escuro.
+
+103
+00:06:05,797 --> 00:06:09,784
+Já se parece mais com a página
+da web que eu tenho.
+
+104
+00:06:09,817 --> 00:06:14,150
+Como eu sabia mudar essas classes?
+Bom, está tudo na documentação.
+
+105
+00:06:14,183 --> 00:06:19,866
+Ela mostra que você pode mudar a cor
+e o sombreamento da barra
+
+106
+00:06:19,899 --> 00:06:21,844
+usando
+essas classes diferentes.
+
+107
+00:06:21,877 --> 00:06:24,236
+Aqui, eu coloquei
+
+108
+00:06:24,270 --> 00:06:28,022
+World Bank Data Dashboard,
+
+109
+00:06:28,055 --> 00:06:31,014
+e então também precisamos
+mudar os links aqui.
+
+110
+00:06:31,047 --> 00:06:35,784
+Os links estão aqui
+nessa lista HTML.
+
+111
+00:06:35,817 --> 00:06:41,670
+Vou dizer que o primeiro é um link
+para o site da Udacity,
+
+112
+00:06:41,703 --> 00:06:47,562
+então preciso mudar
+o href para udacity.com.
+
+113
+00:06:47,595 --> 00:06:53,117
+E há esse elemento span
+que eu não quero, então vou deletar.
+
+114
+00:06:53,150 --> 00:06:55,444
+Certo. Temos esse primeiro.
+
+115
+00:06:55,477 --> 00:07:01,154
+Você notou que a lista aqui diz
+class="nav-item active"?
+
+116
+00:07:01,187 --> 00:07:06,449
+Eu não quero isso.
+Isso tirou o destaque branco.
+
+117
+00:07:06,482 --> 00:07:09,169
+Agora, eu quero o link
+
+118
+00:07:09,203 --> 00:07:13,245
+do World Bank Data.
+Isso apareceu.
+
+119
+00:07:13,278 --> 00:07:16,625
+Não estamos usando o Pricing
+e o Disabled, então podemos deletar.
+
+120
+00:07:16,658 --> 00:07:20,235
+Aqui deletamos o Pricing
+
+121
+00:07:20,269 --> 00:07:24,140
+e o Disabled, e parece bom.
+
+122
+00:07:24,173 --> 00:07:28,915
+Vou expandir um pouco,
+pois aquela é a visualização móvel
+
+123
+00:07:28,948 --> 00:07:30,634
+e essa é a desktop.
+
+124
+00:07:30,667 --> 00:07:33,435
+Na verdade,
+há uma pequena diferença.
+
+125
+00:07:33,468 --> 00:07:36,980
+Isso estava
+alinhado à direita no app,
+
+126
+00:07:37,013 --> 00:07:39,129
+e aqui está
+alinhado à esquerda.
+
+127
+00:07:39,162 --> 00:07:40,844
+Então como podemos mudar isso?
+
+128
+00:07:40,877 --> 00:07:45,569
+Se você procurar na documentação,
+vai ver que, se adicionar uma margem
+
+129
+00:07:45,602 --> 00:07:49,074
+com margin-left auto,
+pode mudar isso.
+
+130
+00:07:49,107 --> 00:07:51,254
+Então vou adicionar isso
+ao código.
+
+131
+00:07:51,287 --> 00:07:54,079
+Veja que mudou
+o alinhamento para mim.
+
+132
+00:07:54,112 --> 00:07:57,346
+Novamente,
+o bom dessa biblioteca
+
+133
+00:07:57,379 --> 00:08:01,759
+é que você só precisa mudar
+as classes e IDs de todas as tags
+
+134
+00:08:01,792 --> 00:08:04,430
+e o CSS funciona
+automaticamente.
+
+135
+00:08:04,463 --> 00:08:06,970
+Vamos voltar para o app.
+
+136
+00:08:07,320 --> 00:08:10,320
+Como eu disse antes,
+fiz essa parte de baixo
+
+137
+00:08:10,354 --> 00:08:13,355
+aninhando colunas e linhas.
+
+138
+00:08:13,388 --> 00:08:17,569
+Pessoalmente, gosto de primeiro
+escrever a estrutura
+
+139
+00:08:17,602 --> 00:08:20,441
+com todas as linhas e colunas
+e depois preencher.
+
+140
+00:08:20,474 --> 00:08:23,515
+Você não precisa fazer isso,
+pode construir aos poucos,
+
+141
+00:08:23,548 --> 00:08:25,224
+mas eu faço assim.
+
+142
+00:08:25,257 --> 00:08:29,837
+Aqui, eu sei que quero
+
+143
+00:08:29,871 --> 00:08:32,300
+que tudo esteja
+dentro de uma linha.
+
+144
+00:08:32,333 --> 00:08:37,074
+Então, dentro dessa linha,
+tenho uma coluna de largura 1
+
+145
+00:08:37,107 --> 00:08:41,928
+e tenho outra coluna
+de largura 11
+
+146
+00:08:41,962 --> 00:08:43,701
+para preencher
+o resto do espaço.
+
+147
+00:08:45,784 --> 00:08:50,870
+Olhando de novo o painel, está bom.
+Vamos conseguir agora.
+
+148
+00:08:50,903 --> 00:08:56,565
+Essa parte, na verdade, tem
+uma linha aqui e depois outra,
+
+149
+00:08:56,598 --> 00:08:59,380
+e cada linha tem duas colunas.
+Então vamos inserir isso.
+
+150
+00:08:59,413 --> 00:09:04,985
+Podemos adicionar outra linha,
+e outra.
+
+151
+00:09:05,018 --> 00:09:10,055
+Então, dentro dessa linha,
+vou colocar duas colunas,
+
+152
+00:09:10,088 --> 00:09:13,047
+cada uma com largura 6,
+
+153
+00:09:13,081 --> 00:09:16,565
+e então vou copiar e colar.
+
+154
+00:09:17,032 --> 00:09:20,150
+Esse é essencialmente
+o esqueleto da parte de baixo.
+
+155
+00:09:20,183 --> 00:09:23,044
+Agora é só uma questão
+de preencher as coisas.
+
+156
+00:09:23,077 --> 00:09:27,157
+Na coluna da esquerda,
+vou colocar links
+
+157
+00:09:27,191 --> 00:09:29,134
+para o LinkedIn e o GitHub.
+
+158
+00:09:29,167 --> 00:09:33,036
+Aqui no href
+é onde você colocaria um link
+
+159
+00:09:33,069 --> 00:09:35,435
+para seu perfil no LinkedIn.
+
+160
+00:09:35,468 --> 00:09:40,764
+Então, na pasta assets,
+que você pode ver aqui à esquerda,
+
+161
+00:09:40,797 --> 00:09:46,284
+eu coloquei várias imagens.
+Vou inseri-las na página,
+
+162
+00:09:46,317 --> 00:09:52,243
+especificar uma tag alt
+e fechar o link.
+
+163
+00:09:52,276 --> 00:09:55,765
+Agora vamos colocar o GitHub,
+e aqui é onde você coloca
+
+164
+00:09:55,798 --> 00:09:58,834
+o link do seu perfil no GitHub,
+no atributo href.
+
+165
+00:09:59,634 --> 00:10:04,219
+Essas imagens são bem grandes
+e também estão se encostando,
+
+166
+00:10:04,252 --> 00:10:06,970
+o que não é exatamente
+como estavam no app.
+
+167
+00:10:07,186 --> 00:10:12,710
+Na documentação, você verá que
+há uma classe chamada "img-fluid"
+
+168
+00:10:12,743 --> 00:10:16,730
+que faz com que as imagens
+diminuam e expandam de forma melhor.
+
+169
+00:10:16,763 --> 00:10:18,904
+Então vou adicionar
+essa classe aqui.
+
+170
+00:10:18,937 --> 00:10:23,870
+Veja que essas imagens crescem
+e diminuem com o tamanho da página.
+
+171
+00:10:23,903 --> 00:10:27,259
+Também vou colocar
+mais algumas coisas.
+
+172
+00:10:27,292 --> 00:10:31,742
+Por exemplo, coloquei uma borda
+aqui do lado direito,
+
+173
+00:10:31,775 --> 00:10:34,094
+que posso adicionar com a
+classe border-right.
+
+174
+00:10:34,127 --> 00:10:35,395
+Aparece aqui.
+
+175
+00:10:35,428 --> 00:10:39,584
+Com o site um pouco maior,
+você conseguirá ver melhor.
+
+176
+00:10:39,617 --> 00:10:44,269
+Também vou adicionar
+um div a mais aqui em cima.
+
+177
+00:10:44,302 --> 00:10:48,610
+Vou adicionar uma classe
+chamada "mt-3".
+
+178
+00:10:48,643 --> 00:10:53,314
+"Mt" é margem superior,
+e "-3" significa
+
+179
+00:10:53,348 --> 00:10:57,625
+que quero colocar
+uma margem de 3.
+
+180
+00:10:58,035 --> 00:11:01,274
+Vamos ver como fica.
+Está melhorando.
+
+181
+00:11:01,307 --> 00:11:06,019
+Também coloquei um pouco
+de espaço entre as imagens,
+
+182
+00:11:06,052 --> 00:11:09,586
+e coloquei um pouco de margem
+à esquerda das imagens.
+
+183
+00:11:09,619 --> 00:11:10,720
+Vamos fazer isso.
+
+184
+00:11:10,753 --> 00:11:16,365
+Coloquei um pouco de margem superior
+nessa imagem do ícone do GitHub,
+
+185
+00:11:16,398 --> 00:11:19,039
+e vou colocar um pouco
+de margem esquerda.
+
+186
+00:11:19,072 --> 00:11:24,074
+Então vou para a classe
+do LinkedIn
+
+187
+00:11:24,107 --> 00:11:29,589
+e também coloco um pouco
+de margem esquerda.
+
+188
+00:11:29,622 --> 00:11:31,670
+Está ficando bem melhor.
+
+189
+00:11:31,703 --> 00:11:34,069
+Vamos olhar o app
+mais uma vez.
+
+190
+00:11:34,102 --> 00:11:36,963
+Temos esses cabeçalhos
+aqui em cima,
+
+191
+00:11:36,996 --> 00:11:40,474
+o uso de terras
+das top 10 economias mundiais
+
+192
+00:11:40,507 --> 00:11:44,579
+e temos essas quatro visualizações.
+Vamos terminar isso.
+
+193
+00:11:44,612 --> 00:11:47,905
+Essa é a classe da coluna 11.
+
+194
+00:11:47,938 --> 00:11:53,745
+Aqui em cima,
+vou colocar um cabeçalho h2,
+
+195
+00:11:53,778 --> 00:11:59,769
+e vou chamá-lo
+de "World Bank Data Dashboard".
+
+196
+00:11:59,802 --> 00:12:04,285
+Então adiciono um cabeçalho h4
+abaixo,
+
+197
+00:12:04,318 --> 00:12:07,568
+"Uso de Terras das Top 10
+
+198
+00:12:07,602 --> 00:12:12,164
+Economias Mundiais"
+e fecho a tag.
+
+199
+00:12:12,197 --> 00:12:15,814
+Isso parece diferente
+porque eu deixei em cinza.
+
+200
+00:12:15,847 --> 00:12:18,509
+Novamente, a documentação
+fala sobre as classes
+
+201
+00:12:18,542 --> 00:12:20,456
+que você precisa usar
+para mudar a cor.
+
+202
+00:12:20,489 --> 00:12:24,889
+Nesse caso, a classe que usei
+foi a text-muted.
+
+203
+00:12:24,922 --> 00:12:27,365
+Está ficando bom,
+estamos perto.
+
+204
+00:12:27,398 --> 00:12:30,378
+Agora é só uma questão
+de preencher as imagens
+
+205
+00:12:30,411 --> 00:12:32,689
+com as visualizações
+em cada parte.
+
+206
+00:12:33,004 --> 00:12:36,929
+Aqui eu especifiquei
+que a imagem deve ser fluida,
+
+207
+00:12:36,962 --> 00:12:40,164
+então especifico
+qual é a imagem.
+
+208
+00:12:40,197 --> 00:12:42,904
+Vamos ver como fica. Certo.
+
+209
+00:12:43,535 --> 00:12:48,001
+Agora vou copiar e colar
+e colocar na próxima coluna,
+
+210
+00:12:48,034 --> 00:12:51,549
+mudando o nome do arquivo
+para plot2.
+
+211
+00:12:51,582 --> 00:12:57,537
+Depois adiciono a próxima imagem
+e vou chamá-la de "plot3".
+
+212
+00:12:58,529 --> 00:13:02,743
+Vou copiar o código
+da imagem final
+
+213
+00:13:02,777 --> 00:13:06,389
+e chamá-la de "plot4",
+e é isso.
+
+214
+00:13:06,422 --> 00:13:12,254
+Agora temos algo
+bem similar ao app.
+
+215
+00:13:12,667 --> 00:13:16,639
+Foi assim que eu construí
+o front-end desse app web.
+
+216
+00:13:16,672 --> 00:13:19,284
+Só o que falta é colocar
+
+217
+00:13:19,318 --> 00:13:23,138
+as visualizações JavaScript
+em HTML,
+
+218
+00:13:23,171 --> 00:13:25,349
+em vez de somente
+usar imagens,
+
+219
+00:13:25,382 --> 00:13:28,659
+e você faz isso
+com a biblioteca Plotly.
+
+220
+00:13:28,692 --> 00:13:31,745
+Mas antes de chegarmos
+à biblioteca Plotly,
+
+221
+00:13:31,778 --> 00:13:35,200
+temos um exercício para praticar
+o uso do Bootstrap.
+

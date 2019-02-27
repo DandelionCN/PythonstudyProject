@@ -1,0 +1,204 @@
+1
+00:00:00,000 --> 00:00:02,984
+Because Flask is a Python library,
+
+2
+00:00:02,984 --> 00:00:06,605
+you can use any other Python library in a Flask app.
+
+3
+00:00:06,605 --> 00:00:10,440
+This makes Flask a great choice for data science because you can use
+
+4
+00:00:10,439 --> 00:00:15,050
+data science tools like Pandas or NumPy inside your Flask app.
+
+5
+00:00:15,050 --> 00:00:20,535
+Here's an example; I've gone to the World Bank website and downloaded data
+
+6
+00:00:20,535 --> 00:00:26,280
+about rural population percentages for various countries over the past 50 years or so.
+
+7
+00:00:26,280 --> 00:00:29,010
+I downloaded the data as a CSV file,
+
+8
+00:00:29,010 --> 00:00:34,859
+clicking down here and then I uploaded the CSV file into the workspace.
+
+9
+00:00:34,859 --> 00:00:36,789
+I created this data folder,
+
+10
+00:00:36,789 --> 00:00:38,969
+and then I uploaded it here.
+
+11
+00:00:38,969 --> 00:00:42,350
+If you haven't uploaded anything to the workspace before,
+
+12
+00:00:42,350 --> 00:00:46,039
+you just click on this plus sign and then you can create new files,
+
+13
+00:00:46,039 --> 00:00:49,504
+new folders or upload a file or upload a folder.
+
+14
+00:00:49,505 --> 00:00:52,715
+Looking at the data, you can see that it's
+
+15
+00:00:52,715 --> 00:00:56,815
+not quite clean and it needs some data wrangling,
+
+16
+00:00:56,814 --> 00:01:01,564
+you can do this wrangling directly in your routes.py file.
+
+17
+00:01:01,564 --> 00:01:06,709
+You just need to import any libraries you're going to use like the Pandas library,
+
+18
+00:01:06,709 --> 00:01:08,464
+so I'm going to do that.
+
+19
+00:01:08,465 --> 00:01:13,340
+Then, I'm going to copy and paste some code I wrote to wrangle the dataset,
+
+20
+00:01:13,340 --> 00:01:17,555
+and get the data into a form that Plotly will be able to use.
+
+21
+00:01:17,555 --> 00:01:22,615
+I'll paste this code below the video as well so that you can study it in more detail.
+
+22
+00:01:22,614 --> 00:01:27,199
+But essentially, all it does is filter out the dataset for
+
+23
+00:01:27,200 --> 00:01:32,750
+certain countries and get the data for just 1990 and 2015.
+
+24
+00:01:32,750 --> 00:01:34,549
+Starting up the app,
+
+25
+00:01:34,549 --> 00:01:37,355
+you'll see that everything still works fine,
+
+26
+00:01:37,355 --> 00:01:41,015
+and in fact I added a couple of print statements into
+
+27
+00:01:41,015 --> 00:01:45,210
+my code so that you could see the results of my data wrangling.
+
+28
+00:01:45,209 --> 00:01:49,869
+However, now my routes.py file looks a bit messy,
+
+29
+00:01:49,870 --> 00:01:53,990
+so I'm going to refactor this code so that everything's a bit cleaner.
+
+30
+00:01:53,989 --> 00:01:57,424
+I'm going to create a new folder and call it
+
+31
+00:01:57,424 --> 00:02:01,459
+wrangling scripts and then inside this folder,
+
+32
+00:02:01,459 --> 00:02:08,229
+I'm going to create a new file and call it wrangling.py.
+
+33
+00:02:08,229 --> 00:02:10,424
+Okay, and then wrangling.py,
+
+34
+00:02:10,425 --> 00:02:11,660
+I'm just going to take all of
+
+35
+00:02:11,659 --> 00:02:18,645
+this data wrangling code and cut it out of routes and put it in wrangling.py.
+
+36
+00:02:18,645 --> 00:02:24,620
+Now, I need to import Pandas and then I'm going to make all of this into
+
+37
+00:02:24,620 --> 00:02:31,235
+a function and the return for this function is just going to be this data variable.
+
+38
+00:02:31,235 --> 00:02:37,595
+Okay. Now returning to routes.py and looking at the workspace folders,
+
+39
+00:02:37,594 --> 00:02:45,615
+I'm going to say from wrangling scripts.wrangling,
+
+40
+00:02:45,615 --> 00:02:50,260
+and then import this data wrangling function.
+
+41
+00:02:50,259 --> 00:02:53,629
+Then, I'm going to call this function and save the results in
+
+42
+00:02:53,629 --> 00:02:57,484
+the data variable and then just print out the results so we can see it.
+
+43
+00:02:57,485 --> 00:02:59,715
+Now, I'm going to start the app up,
+
+44
+00:02:59,715 --> 00:03:03,655
+okay and you can see everything's still working except now the
+
+45
+00:03:03,655 --> 00:03:08,414
+routes.py file stays clean and it's easier to understand what's going on.
+
+46
+00:03:08,414 --> 00:03:11,659
+Now, of course you might want to do some of
+
+47
+00:03:11,659 --> 00:03:16,789
+this wrangling outside of your web app and then upload a cleaner CSV file,
+
+48
+00:03:16,789 --> 00:03:21,564
+but you'd still need a way to load the CSV file which you can do with Pandas.
+
+49
+00:03:21,564 --> 00:03:23,359
+In the next part of the lesson,
+
+50
+00:03:23,360 --> 00:03:25,775
+we're going to add Plotly so that we can
+
+51
+00:03:25,775 --> 00:03:29,670
+actually render this data as a data visualization.
+

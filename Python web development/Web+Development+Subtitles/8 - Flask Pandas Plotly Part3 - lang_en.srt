@@ -1,0 +1,84 @@
+1
+00:00:00,000 --> 00:00:03,629
+Okay. So, in this web app so far,
+
+2
+00:00:03,629 --> 00:00:06,835
+we only had data for the United States and it was one line.
+
+3
+00:00:06,835 --> 00:00:12,724
+So now, I've done a graph where I have all of these data from different countries.
+
+4
+00:00:12,724 --> 00:00:16,335
+So, let me show you how I did this and it's not that much code.
+
+5
+00:00:16,335 --> 00:00:18,795
+Going back here to the workspace,
+
+6
+00:00:18,795 --> 00:00:22,385
+all I did was change a little bit of the routes.py file.
+
+7
+00:00:22,385 --> 00:00:26,495
+So, here what I have commented was the code before where I had
+
+8
+00:00:26,495 --> 00:00:31,100
+graph one and I was just using data from the United States in the x,
+
+9
+00:00:31,100 --> 00:00:36,195
+y and name parts of this list.
+
+10
+00:00:36,195 --> 00:00:39,770
+If I go down here, what I've done now,
+
+11
+00:00:39,770 --> 00:00:44,255
+is I've made this graph one list and then I'm actually
+
+12
+00:00:44,255 --> 00:00:49,210
+iterating through the data and for each country I have of data,
+
+13
+00:00:49,210 --> 00:00:55,185
+I am appending part of the visualization to this graph one list.
+
+14
+00:00:55,185 --> 00:00:58,130
+So, you might have to stare at this code for a little bit to understand
+
+15
+00:00:58,130 --> 00:01:01,325
+what I did but essentially it's really similar.
+
+16
+00:01:01,325 --> 00:01:04,630
+You still have this go.scatter part here,
+
+17
+00:01:04,629 --> 00:01:08,155
+but the difference is that I keep appending
+
+18
+00:01:08,155 --> 00:01:13,340
+new ones to this graph one list for each country in the data set.
+
+19
+00:01:13,340 --> 00:01:18,320
+That's all I did to get this visualization to show up like this.
+
+20
+00:01:18,319 --> 00:01:22,234
+Next, I'm going to add in a few more visualizations
+
+21
+00:01:22,234 --> 00:01:26,599
+and also start using Bootstrap so that the front end looks a little bit better.
+

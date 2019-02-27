@@ -1,0 +1,72 @@
+1
+00:00:00,000 --> 00:00:03,960
+In the major web browsers like Firefox or Chrome,
+
+2
+00:00:03,960 --> 00:00:06,570
+you can actually see the messages and files
+
+3
+00:00:06,570 --> 00:00:09,290
+getting transmitted between you and the server.
+
+4
+00:00:09,289 --> 00:00:11,649
+In Chrome, go to the View menu,
+
+5
+00:00:11,650 --> 00:00:15,294
+then select Developer, and Developer tools.
+
+6
+00:00:15,294 --> 00:00:17,024
+That's what I have open here.
+
+7
+00:00:17,024 --> 00:00:22,250
+Then click up here on the Network tab and visit a website.
+
+8
+00:00:22,250 --> 00:00:26,259
+I'm going to visit the Udacity homepage.
+
+9
+00:00:26,260 --> 00:00:31,585
+So, these are all the files that your browser requests when going to a web page.
+
+10
+00:00:31,585 --> 00:00:34,454
+If you click on a file, for example, here,
+
+11
+00:00:34,454 --> 00:00:37,295
+you'll see Request Method: GET,
+
+12
+00:00:37,295 --> 00:00:39,130
+which is your browser saying,
+
+13
+00:00:39,130 --> 00:00:42,290
+"Get me this file or information from the server."
+
+14
+00:00:42,289 --> 00:00:45,019
+The reason I'm showing you all of this is so that you can
+
+15
+00:00:45,020 --> 00:00:49,060
+physically see how the web actually works and what is going on.
+
+16
+00:00:49,060 --> 00:00:51,410
+As you practice coding with Flask,
+
+17
+00:00:51,409 --> 00:00:54,109
+it can be helpful to understand the basics of how
+
+18
+00:00:54,109 --> 00:00:57,670
+the Internet works between a browser and a server.
+

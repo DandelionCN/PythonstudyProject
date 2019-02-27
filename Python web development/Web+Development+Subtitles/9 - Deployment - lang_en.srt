@@ -1,0 +1,680 @@
+1
+00:00:00,000 --> 00:00:03,404
+Up until now, you've been developing the web app
+
+2
+00:00:03,404 --> 00:00:06,844
+in the classroom or on your local computer.
+
+3
+00:00:06,844 --> 00:00:10,775
+However, you can't share the app yet with other people,
+
+4
+00:00:10,775 --> 00:00:14,940
+unless you transfer all the files to someone else's computer then have
+
+5
+00:00:14,939 --> 00:00:19,170
+that person setup a Python environment on his or her local computer.
+
+6
+00:00:19,170 --> 00:00:21,420
+So, now it's time to deploy the app to
+
+7
+00:00:21,420 --> 00:00:26,140
+an external server with a web address that anyone can go to to see your work.
+
+8
+00:00:26,140 --> 00:00:30,785
+There are a lot of companies that provide web servers for deploying a web app.
+
+9
+00:00:30,785 --> 00:00:33,679
+In this video, I've chosen to use Heroku,
+
+10
+00:00:33,679 --> 00:00:37,079
+which is considered a Platform as a Service.
+
+11
+00:00:37,079 --> 00:00:39,979
+In my opinion, it's one of the easier platforms
+
+12
+00:00:39,979 --> 00:00:43,125
+to use and doesn't require much configuration.
+
+13
+00:00:43,125 --> 00:00:46,429
+There's also a free tier that doesn't expire.
+
+14
+00:00:46,429 --> 00:00:49,429
+So, if you have a small web app like this one,
+
+15
+00:00:49,429 --> 00:00:51,200
+that doesn't have a database,
+
+16
+00:00:51,200 --> 00:00:54,109
+Heroku will work for our needs.
+
+17
+00:00:54,109 --> 00:00:57,460
+I'm going to walk you through getting the app up on Heroku,
+
+18
+00:00:57,460 --> 00:00:59,005
+so that you can do it yourself.
+
+19
+00:00:59,005 --> 00:01:02,209
+I'm going to do it from the classroom Linux workspace.
+
+20
+00:01:02,209 --> 00:01:05,295
+I'll also provide a list, underneath the video,
+
+21
+00:01:05,295 --> 00:01:09,299
+of other services you can use to put the web app on.
+
+22
+00:01:09,299 --> 00:01:12,795
+Okay. So, this is our web app.
+
+23
+00:01:12,795 --> 00:01:17,180
+All of the folders and files are here in the left-hand column.
+
+24
+00:01:17,180 --> 00:01:19,910
+My first step is, I'm going to make
+
+25
+00:01:19,909 --> 00:01:24,439
+a new folder and I'm going to put all of these files into that new folder.
+
+26
+00:01:24,439 --> 00:01:26,439
+I'm going to do this from the terminal,
+
+27
+00:01:26,439 --> 00:01:29,299
+but you could also do this using the plus sign and
+
+28
+00:01:29,299 --> 00:01:32,894
+also right-clicking on these folders and files here.
+
+29
+00:01:32,894 --> 00:01:34,819
+So, I open a new terminal,
+
+30
+00:01:34,819 --> 00:01:36,759
+and I'm just going to say,
+
+31
+00:01:36,760 --> 00:01:39,829
+make directory, and I'll call it web_app.
+
+32
+00:01:39,829 --> 00:01:45,140
+Now, I'm going to move all of these folders and files into this new web app folder.
+
+33
+00:01:45,140 --> 00:01:47,605
+So, MV is for move,
+
+34
+00:01:47,605 --> 00:01:53,040
+-t just means I'm specifying the new directory first and then after that,
+
+35
+00:01:53,040 --> 00:02:00,460
+all of the files and folders that I want to move into the web app folder.
+
+36
+00:02:00,730 --> 00:02:04,270
+It looks like I spelled worldbankapp wrong.
+
+37
+00:02:04,269 --> 00:02:06,414
+So let me just fix that.
+
+38
+00:02:06,415 --> 00:02:10,974
+So, you can see, everything moved over into this new folder.
+
+39
+00:02:10,974 --> 00:02:15,069
+So, in order to install this web app,
+
+40
+00:02:15,069 --> 00:02:19,219
+we're going to have to specify all the python libraries that are needed.
+
+41
+00:02:19,219 --> 00:02:20,805
+Now, in this workspace,
+
+42
+00:02:20,805 --> 00:02:22,879
+and probably on your local computer as well,
+
+43
+00:02:22,879 --> 00:02:24,034
+there are a lot of
+
+44
+00:02:24,034 --> 00:02:29,439
+extra Python libraries installed that you don't actually need for your web app.
+
+45
+00:02:29,439 --> 00:02:34,444
+So, we're going to deal with this by creating a virtual environment and just
+
+46
+00:02:34,444 --> 00:02:37,189
+installing all the Python libraries we
+
+47
+00:02:37,189 --> 00:02:40,710
+need for this particular app into the virtual environment.
+
+48
+00:02:40,710 --> 00:02:44,159
+Now, this workspace has Anaconda installed,
+
+49
+00:02:44,159 --> 00:02:48,299
+which is a set of tools used for Python and data science.
+
+50
+00:02:48,300 --> 00:02:51,325
+There's actually an issue with
+
+51
+00:02:51,324 --> 00:02:56,289
+the Anaconda installation and Python and virtual environments.
+
+52
+00:02:56,289 --> 00:02:58,509
+So, first before doing anything,
+
+53
+00:02:58,509 --> 00:03:02,729
+you need to run conda update python,
+
+54
+00:03:02,729 --> 00:03:04,844
+and this is going to take a little while.
+
+55
+00:03:04,844 --> 00:03:09,594
+Now, if you don't have Conda installed on your local computer,
+
+56
+00:03:09,594 --> 00:03:11,680
+you wouldn't have to do this step.
+
+57
+00:03:11,680 --> 00:03:14,415
+Okay. And when it says Proceed click
+
+58
+00:03:14,414 --> 00:03:20,014
+yes and hit Enter and then wait for the installation to finish.
+
+59
+00:03:20,014 --> 00:03:23,079
+Okay. Now that Python is updated.
+
+60
+00:03:23,080 --> 00:03:27,025
+You can actually make a virtual environment and then start it up.
+
+61
+00:03:27,025 --> 00:03:29,569
+So, to make a virtual environment,
+
+62
+00:03:29,569 --> 00:03:32,204
+go into the terminal and type the following,
+
+63
+00:03:32,205 --> 00:03:39,630
+python3 -n venv, and then the name of your virtual environment,
+
+64
+00:03:39,629 --> 00:03:41,019
+which can be anything you want,
+
+65
+00:03:41,020 --> 00:03:43,980
+I'm going to call it worldbankenv.
+
+66
+00:03:44,740 --> 00:03:48,260
+Now, you can see there's a new folder up here on the left called
+
+67
+00:03:48,259 --> 00:03:53,039
+worldbankenv and inside it's actually a Python installation.
+
+68
+00:03:53,039 --> 00:03:57,099
+That's separate from the rest of your Python installation on your computer.
+
+69
+00:03:57,099 --> 00:04:01,090
+The next thing is that you need to activate the virtual environment.
+
+70
+00:04:01,090 --> 00:04:04,569
+So, I'm going to type in source worldbankenv/bin/activate,
+
+71
+00:04:08,039 --> 00:04:12,750
+and you can see that the virtual environment is activated,
+
+72
+00:04:12,750 --> 00:04:14,155
+because here in the terminal,
+
+73
+00:04:14,155 --> 00:04:16,720
+now the name of the virtual environment appears.
+
+74
+00:04:16,720 --> 00:04:19,220
+Okay. The next step is that we're going to pip
+
+75
+00:04:19,220 --> 00:04:22,970
+install the libraries we need for our Flask app.
+
+76
+00:04:22,970 --> 00:04:25,550
+So, again, the reason we're creating
+
+77
+00:04:25,550 --> 00:04:29,329
+this virtual environment is that all these libraries are going to
+
+78
+00:04:29,329 --> 00:04:31,909
+be installed in the virtual environment instead of
+
+79
+00:04:31,910 --> 00:04:36,000
+the regular Python installation on your local computer.
+
+80
+00:04:36,000 --> 00:04:38,779
+So, pip install.
+
+81
+00:04:38,779 --> 00:04:42,544
+Then I'm going to list out all of the libraries I need,
+
+82
+00:04:42,545 --> 00:04:46,475
+which in this case is Flask, Pandas and Plotly.
+
+83
+00:04:46,475 --> 00:04:50,410
+And then I'm actually going to add in this other library called
+
+84
+00:04:50,410 --> 00:04:57,140
+Gunicorn which we're going to need for deploying the web app.
+
+85
+00:04:57,139 --> 00:04:59,154
+Okay. Now from the terminal,
+
+86
+00:04:59,154 --> 00:05:02,500
+I am going to go into the web app folder.
+
+87
+00:05:02,500 --> 00:05:08,240
+The next step is to actually install a set of tools that Heroku provides,
+
+88
+00:05:08,240 --> 00:05:14,375
+so that you can write commands and upload your app directly from the terminal to Heroku.
+
+89
+00:05:14,375 --> 00:05:17,149
+There's actually a web page that tells
+
+90
+00:05:17,149 --> 00:05:20,049
+you how to install these tools on different systems.
+
+91
+00:05:20,050 --> 00:05:22,235
+This is what it looks like here.
+
+92
+00:05:22,235 --> 00:05:24,944
+I'll also put a link to it below the video.
+
+93
+00:05:24,944 --> 00:05:26,735
+But on this page,
+
+94
+00:05:26,735 --> 00:05:31,889
+it says if you're on a Linux system or Ubuntu system, which we are,
+
+95
+00:05:31,889 --> 00:05:34,629
+then you're going to do the following,
+
+96
+00:05:34,629 --> 00:05:42,759
+you go into terminal and you run the following command up here.
+
+97
+00:05:42,759 --> 00:05:47,449
+Now it's installing. Just to check that everything installed,
+
+98
+00:05:47,449 --> 00:05:51,935
+I'm going to type heroku --version.
+
+99
+00:05:51,935 --> 00:05:54,845
+Okay. So, it looks like it installed and we're good.
+
+100
+00:05:54,845 --> 00:05:59,250
+The next thing you're going to want to do is to sign up for a Heroku account.
+
+101
+00:05:59,250 --> 00:06:02,209
+So, it's just like signing up for any other web service.
+
+102
+00:06:02,209 --> 00:06:11,669
+If you go to the Heroku website and you click on Sign up here in the top right corner,
+
+103
+00:06:11,670 --> 00:06:14,020
+you just fill this out with your information.
+
+104
+00:06:14,019 --> 00:06:16,839
+So, once you've made a username,
+
+105
+00:06:16,839 --> 00:06:19,919
+which is just your email address and a password,
+
+106
+00:06:19,920 --> 00:06:23,645
+you actually need to log in from the command line.
+
+107
+00:06:23,644 --> 00:06:26,509
+So, now that we have the Heroku tools installed,
+
+108
+00:06:26,509 --> 00:06:32,000
+you can type heroku login and it says "Enter your login credentials",
+
+109
+00:06:32,000 --> 00:06:35,209
+email and then it's asking after that for a password.
+
+110
+00:06:35,209 --> 00:06:39,974
+So, I'm going to hide this from the screen while I put this information in.
+
+111
+00:06:39,975 --> 00:06:43,480
+Okay. So, now I'm logged into my Heroku account.
+
+112
+00:06:43,480 --> 00:06:45,230
+Again, it's just a matter of putting in
+
+113
+00:06:45,230 --> 00:06:49,825
+your email address and your password for your Heroku account.
+
+114
+00:06:49,824 --> 00:06:53,899
+Now, there's just some housekeeping to do before we can
+
+115
+00:06:53,899 --> 00:06:58,444
+upload all of this to a Heroku web server.
+
+116
+00:06:58,444 --> 00:07:02,750
+So, first of all, I'm going to open worldbank.py and I'm
+
+117
+00:07:02,750 --> 00:07:07,310
+going to remove this app.run line because we don't need this anymore.
+
+118
+00:07:07,310 --> 00:07:10,245
+I also need to create a Procfile,
+
+119
+00:07:10,245 --> 00:07:15,350
+which is a file that tells Heroku what to do when starting your web app.
+
+120
+00:07:15,350 --> 00:07:21,870
+You could do this up here by creating a new file or you can do it in the terminal and say
+
+121
+00:07:21,870 --> 00:07:28,939
+touch Procfile and you can see that this Procfile disappeared here in the left hand side.
+
+122
+00:07:28,939 --> 00:07:32,240
+I'm going to double click to open it and then I'm going to
+
+123
+00:07:32,240 --> 00:07:36,835
+say web gunicorn worldbank:app.
+
+124
+00:07:36,834 --> 00:07:41,339
+So, this is essentially just says when starting up the web app,
+
+125
+00:07:41,339 --> 00:07:45,289
+call the gunicorn library and run
+
+126
+00:07:45,290 --> 00:07:52,444
+my worldbank app which has this app variable in it, which we've seen before.
+
+127
+00:07:52,444 --> 00:07:54,529
+The next thing I need to do is
+
+128
+00:07:54,529 --> 00:07:58,064
+specify all of the Python libraries that are going to be needed.
+
+129
+00:07:58,064 --> 00:08:03,219
+So, if you type pip freeze into the terminal,
+
+130
+00:08:03,220 --> 00:08:08,300
+it's going to give you a list of all of the currently installed Python libraries.
+
+131
+00:08:08,300 --> 00:08:10,730
+So, you're going to need to put all of
+
+132
+00:08:10,730 --> 00:08:14,265
+this information into a file called requirements.txt.
+
+133
+00:08:14,264 --> 00:08:22,254
+So, I'm going to say pip freeze > requirements.txt.
+
+134
+00:08:22,254 --> 00:08:26,944
+That's going to put all this information into a file called requirements.txt.
+
+135
+00:08:26,944 --> 00:08:29,569
+It's important that this file is actually called
+
+136
+00:08:29,569 --> 00:08:32,559
+requirementstxt because Heroku is going to look for this file.
+
+137
+00:08:32,559 --> 00:08:40,824
+So, you can see it just lists out all of the Python libraries that this app depends on.
+
+138
+00:08:40,825 --> 00:08:45,645
+The next step is to initiate a git repository.
+
+139
+00:08:45,644 --> 00:08:53,319
+So, git init and then git add and then I put the period here.
+
+140
+00:08:53,320 --> 00:09:00,690
+Then I'm going to say git commit -m and say first commit as the message.
+
+141
+00:09:00,690 --> 00:09:03,380
+Okay. It says that Please tell me who you are.
+
+142
+00:09:03,379 --> 00:09:05,779
+You have to configure an email address and a name.
+
+143
+00:09:05,779 --> 00:09:10,759
+So, you can actually put anything in this that you want.
+
+144
+00:09:10,759 --> 00:09:19,850
+I'm just going to say something@example.com and git config user.name.
+
+145
+00:09:19,850 --> 00:09:22,840
+You can put your real things in here if you want. My name's Andrew.
+
+146
+00:09:22,840 --> 00:09:26,080
+So, okay, now let's try committing again,
+
+147
+00:09:26,080 --> 00:09:29,370
+git commit -m first commit.
+
+148
+00:09:29,370 --> 00:09:31,435
+Okay. So, we made our first commit.
+
+149
+00:09:31,434 --> 00:09:37,369
+The last step is to create a web app on Heroku.
+
+150
+00:09:37,370 --> 00:09:38,440
+So, to do that,
+
+151
+00:09:38,440 --> 00:09:43,825
+you say heroku create and then the name of your web app.
+
+152
+00:09:43,825 --> 00:09:46,009
+This name has to be distinct.
+
+153
+00:09:46,009 --> 00:09:49,485
+There can only be one of these names on all of Heroku.
+
+154
+00:09:49,485 --> 00:09:51,529
+So, if the first one you try doesn't work,
+
+155
+00:09:51,529 --> 00:09:53,459
+just keep trying until you find something.
+
+156
+00:09:53,460 --> 00:09:56,370
+So, I'm going to call this dsnd-udacity-webapp.
+
+157
+00:09:57,620 --> 00:10:03,889
+Hit Enter. Okay. So, it gave me the link where I can see the web app,
+
+158
+00:10:03,889 --> 00:10:06,399
+and then it also created a git repository on
+
+159
+00:10:06,399 --> 00:10:11,610
+Heroku where the files are actually going to be uploaded to and stored.
+
+160
+00:10:11,610 --> 00:10:13,759
+I'm also, just to double-check,
+
+161
+00:10:13,759 --> 00:10:17,240
+I'm going to say git remote -v. Yeah.
+
+162
+00:10:17,240 --> 00:10:19,955
+Which shows you that Heroku automatically
+
+163
+00:10:19,955 --> 00:10:24,055
+set up these git repositories as remote repositories for you.
+
+164
+00:10:24,054 --> 00:10:26,014
+So, the last step is to say
+
+165
+00:10:26,014 --> 00:10:34,514
+git push heroku master and that's going to push our app to that Heroku git repository.
+
+166
+00:10:34,514 --> 00:10:39,600
+Okay. Here, it says that everything was deployed to this web address.
+
+167
+00:10:39,600 --> 00:10:41,274
+So, I'm going to click on that.
+
+168
+00:10:41,274 --> 00:10:43,629
+Yeah. It looks like the web app deployed.
+
+169
+00:10:43,629 --> 00:10:51,779
+So, now it's officially at this web address: dsnd-udacity-webapp.herokuapp.com.
+
+170
+00:10:51,779 --> 00:10:57,529
+So, that is one way to deploy a Flask app to the web.
+

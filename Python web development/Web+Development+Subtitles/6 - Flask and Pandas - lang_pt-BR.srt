@@ -1,0 +1,313 @@
+1
+00:00:00,000 --> 00:00:02,933
+Como o Flask é
+uma biblioteca Python,
+
+2
+00:00:02,966 --> 00:00:05,533
+você pode usar
+qualquer biblioteca Python
+
+3
+00:00:05,566 --> 00:00:06,766
+num aplicativo Flask.
+
+4
+00:00:06,799 --> 00:00:09,566
+O Flask é uma ótima escolha
+para Ciência de Dados,
+
+5
+00:00:09,599 --> 00:00:11,499
+porque você
+pode usar ferramentas
+
+6
+00:00:11,533 --> 00:00:14,999
+como Pandas ou NumPy
+dentro do aplicativo Flask.
+
+7
+00:00:15,033 --> 00:00:19,099
+Veja está um exemplo.
+Fui ao website do Banco Mundial
+
+8
+00:00:19,133 --> 00:00:22,866
+e baixei dados sobre a porcentagem
+da população rural
+
+9
+00:00:22,899 --> 00:00:26,233
+em vários países
+nos últimos 50 anos.
+
+10
+00:00:26,266 --> 00:00:28,966
+Eu baixei os dados
+como um arquivo CSV,
+
+11
+00:00:28,999 --> 00:00:30,633
+clicando aqui em baixo.
+
+12
+00:00:30,666 --> 00:00:34,799
+Fiz o upload do arquivo CSV
+para o espaço de trabalho.
+
+13
+00:00:34,833 --> 00:00:36,733
+Eu criei esta pasta de dados
+
+14
+00:00:36,766 --> 00:00:38,933
+e fiz o upload aqui.
+
+15
+00:00:38,966 --> 00:00:42,299
+Se nunca fez o upload de nada
+para o espaço de trabalho,
+
+16
+00:00:42,333 --> 00:00:44,033
+apenas clique no sinal de mais
+
+17
+00:00:44,066 --> 00:00:46,766
+e você cria novos arquivos,
+novas pastas,
+
+18
+00:00:46,799 --> 00:00:49,466
+ou faz o upload de um arquivo
+ou de uma pasta.
+
+19
+00:00:49,499 --> 00:00:51,133
+Olhando os dados,
+
+20
+00:00:51,166 --> 00:00:54,299
+você pode ver
+que não estão muito limpos
+
+21
+00:00:54,333 --> 00:00:56,766
+e precisam
+de preparação de dados.
+
+22
+00:00:56,799 --> 00:01:01,499
+Você pode fazer esta preparação
+diretamente no arquivo routes.py.
+
+23
+00:01:01,533 --> 00:01:04,866
+Você só precisa importar
+as bibliotecas que for usar,
+
+24
+00:01:04,899 --> 00:01:06,666
+como a biblioteca Pandas.
+
+25
+00:01:06,699 --> 00:01:08,399
+Então vou fazer isso.
+
+26
+00:01:08,433 --> 00:01:11,799
+Vou copiar e colar códigos
+que escrevi
+
+27
+00:01:11,833 --> 00:01:13,533
+para preparar
+o conjunto de dados
+
+28
+00:01:13,566 --> 00:01:17,499
+e deixar os dados numa forma
+que o Plotly será capaz de usar.
+
+29
+00:01:17,533 --> 00:01:20,599
+Também vou colar este código
+abaixo do vídeo
+
+30
+00:01:20,633 --> 00:01:22,666
+para você estudá-lo
+em mais detalhes.
+
+31
+00:01:22,699 --> 00:01:23,966
+Mas, essencialmente,
+
+32
+00:01:23,999 --> 00:01:28,166
+ele filtra o conjunto de dados
+para certos países
+
+33
+00:01:28,199 --> 00:01:32,699
+e obtém os dados
+para 1990 e 2015.
+
+34
+00:01:32,733 --> 00:01:37,299
+Iniciando o aplicativo, você verá
+que tudo ainda funciona bem,
+
+35
+00:01:37,333 --> 00:01:41,633
+e eu adicionei algumas instruções
+de print para o meu código
+
+36
+00:01:41,666 --> 00:01:45,166
+para você ver os resultados
+da minha preparação de dados.
+
+37
+00:01:45,199 --> 00:01:49,833
+Contudo, agora o arquivo routes.py
+parece bagunçado,
+
+38
+00:01:49,866 --> 00:01:53,933
+então vou refatorar este código
+para tudo ficar mais limpo.
+
+39
+00:01:53,966 --> 00:01:59,599
+Vou criar uma nova pasta
+e chamá-la de "wrangling_scripts".
+
+40
+00:01:59,633 --> 00:02:04,084
+E, dentro da pasta,
+vou criar um novo arquivo
+
+41
+00:02:04,117 --> 00:02:08,166
+e chamá-lo de "wrangling.py".
+
+42
+00:02:08,199 --> 00:02:10,366
+Certo, em wrangling.py,
+
+43
+00:02:10,399 --> 00:02:14,333
+vou pegar todo
+este código de preparação de dados,
+
+44
+00:02:14,366 --> 00:02:18,599
+cortá-lo de routes
+e colocá-lo em wrangling.py.
+
+45
+00:02:18,633 --> 00:02:22,266
+Preciso importar Pandas
+
+46
+00:02:22,299 --> 00:02:25,299
+e vou tornar tudo isto
+uma função.
+
+47
+00:02:25,333 --> 00:02:31,199
+E o retorno para essa função
+vai ser esta variável de dados.
+
+48
+00:02:31,233 --> 00:02:34,033
+Ok. Retornando para routes.py
+
+49
+00:02:34,066 --> 00:02:37,533
+e olhando as pastas
+de espaço de trabalho,
+
+50
+00:02:37,566 --> 00:02:45,566
+vou escrever
+"from wrangling_scripts.wrangling"
+
+51
+00:02:45,599 --> 00:02:50,199
+e importar
+esta função data wrangling.
+
+52
+00:02:50,233 --> 00:02:52,566
+E vou chamar esta função,
+
+53
+00:02:52,599 --> 00:02:54,966
+salvar os resultados
+na variável de dados
+
+54
+00:02:54,999 --> 00:02:57,433
+e printar os resultados
+para podermos vê-los.
+
+55
+00:02:57,466 --> 00:02:59,666
+Vou iniciar o aplicativo.
+
+56
+00:02:59,699 --> 00:03:02,366
+E você pode ver
+que tudo ainda funciona,
+
+57
+00:03:02,399 --> 00:03:05,966
+só que agora o arquivo routes.py
+fica limpo
+
+58
+00:03:05,999 --> 00:03:08,499
+e é mais fácil de entender
+o que está acontecendo.
+
+59
+00:03:08,533 --> 00:03:12,466
+É claro que você pode querer fazer
+esta preparação de dados
+
+60
+00:03:12,499 --> 00:03:13,933
+fora do seu aplicativo
+
+61
+00:03:13,966 --> 00:03:16,566
+e fazer o upload
+de um arquivo CSV mais limpo.
+
+62
+00:03:16,599 --> 00:03:19,666
+Mas você ainda precisa de um jeito
+de carregar o arquivo CSV,
+
+63
+00:03:19,699 --> 00:03:21,566
+o que você pode fazer
+com o Pandas.
+
+64
+00:03:21,599 --> 00:03:24,599
+Na próxima parte da aula,
+vamos adicionar Plotly
+
+65
+00:03:24,633 --> 00:03:27,733
+para podermos renderizar
+estes dados
+
+66
+00:03:27,766 --> 00:03:29,666
+como visualização de dados.
+

@@ -1,0 +1,112 @@
+1
+00:00:00,000 --> 00:00:04,525
+Let's talk about how to structure and organize HTML code.
+
+2
+00:00:04,525 --> 00:00:06,725
+As you've already experienced yourself,
+
+3
+00:00:06,724 --> 00:00:10,934
+each new HTML tag gets rendered one after the other.
+
+4
+00:00:10,935 --> 00:00:14,214
+So, for example, if I use a paragraph tag,
+
+5
+00:00:14,214 --> 00:00:16,024
+and then another paragraph tag,
+
+6
+00:00:16,024 --> 00:00:18,644
+they get rendered from top to bottom.
+
+7
+00:00:18,644 --> 00:00:23,829
+I'm going to add a couple more links and some paragraphs to this document.
+
+8
+00:00:23,829 --> 00:00:29,259
+So, you can see, the links get rendered one after another,
+
+9
+00:00:29,260 --> 00:00:34,450
+and the paragraphs get rendered one after another in the order I've written the code.
+
+10
+00:00:34,450 --> 00:00:37,685
+There's a tag called div, short for division,
+
+11
+00:00:37,685 --> 00:00:42,625
+that is specifically used for grouping large chunks of related content.
+
+12
+00:00:42,625 --> 00:00:46,295
+This tag lets you pick out specific parts of your document
+
+13
+00:00:46,295 --> 00:00:50,374
+for adding CSS styles or interactions using JavaScript.
+
+14
+00:00:50,374 --> 00:00:54,650
+I'm going to add div tags to create a separate link section,
+
+15
+00:00:54,649 --> 00:00:57,935
+and another section around the entire bottom paragraphs.
+
+16
+00:00:57,935 --> 00:01:00,340
+Let me expand this so you can see it better.
+
+17
+00:01:00,340 --> 00:01:05,034
+All the div tags are doing are separating the content into separate groups.
+
+18
+00:01:05,034 --> 00:01:09,939
+There's another tag called span that some people confuse with a div tag.
+
+19
+00:01:09,939 --> 00:01:12,319
+A span element separates off
+
+20
+00:01:12,319 --> 00:01:16,279
+a small piece of content such as in the middle of a paragraph.
+
+21
+00:01:16,280 --> 00:01:18,859
+For example, if you wanted to change the color of
+
+22
+00:01:18,859 --> 00:01:21,799
+one word instead of an entire paragraph,
+
+23
+00:01:21,799 --> 00:01:23,494
+you could use a span tag.
+
+24
+00:01:23,495 --> 00:01:26,375
+I'm going to add one here so you can see what it looks like.
+
+25
+00:01:26,375 --> 00:01:31,099
+Notice that the div and the span tag aren't actually changing anything,
+
+26
+00:01:31,099 --> 00:01:34,614
+they're just ways to separate out HTML code.
+
+27
+00:01:34,614 --> 00:01:37,219
+When you start styling your web page,
+
+28
+00:01:37,219 --> 00:01:40,530
+the div and span tags will make more sense.
+

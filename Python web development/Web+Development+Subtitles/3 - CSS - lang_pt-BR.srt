@@ -1,0 +1,672 @@
+1
+00:00:00,234 --> 00:00:02,769
+Estou no site Google Notícias.
+
+2
+00:00:02,803 --> 00:00:06,173
+O site Google Notícias tem
+um layout bonito, não tem?
+
+3
+00:00:06,206 --> 00:00:08,408
+Por exemplo, se eu diminuir
+o navegador,
+
+4
+00:00:08,442 --> 00:00:11,211
+tudo se adapta
+a uma tela menor.
+
+5
+00:00:11,245 --> 00:00:14,681
+Todo o conteúdo está dividido
+em seções claras.
+
+6
+00:00:15,682 --> 00:00:18,352
+Tudo isso é feito
+com estilização CSS.
+
+7
+00:00:18,385 --> 00:00:20,621
+Vou mostrar um truque
+
+8
+00:00:20,654 --> 00:00:24,591
+para remover o CSS de um site.
+
+9
+00:00:24,625 --> 00:00:27,728
+Vou abrir algo chamado
+"Ferramentas do Desenvolvedor",
+
+10
+00:00:27,761 --> 00:00:31,098
+que permite ver o código
+que compõe um site.
+
+11
+00:00:31,131 --> 00:00:34,434
+Estou no Chrome
+e, na barra de menu, no topo,
+
+12
+00:00:34,468 --> 00:00:37,371
+está sob Exibir, Desenvolvedor
+
+13
+00:00:37,404 --> 00:00:39,706
+e, finalmente,
+Ferramentas do Desenvolvedor.
+
+14
+00:00:39,740 --> 00:00:42,976
+Aqui nesta caixa
+
+15
+00:00:43,010 --> 00:00:45,512
+está o HTML deste site.
+
+16
+00:00:45,546 --> 00:00:48,549
+Vou excluir a tag head
+que, entre outras coisas,
+
+17
+00:00:48,582 --> 00:00:51,785
+contém código
+para a estilização CSS.
+
+18
+00:00:51,818 --> 00:00:56,390
+Agora tudo que sobrou
+foi o HTML do site.
+
+19
+00:00:56,423 --> 00:00:59,826
+Se eu rolar para baixo,
+você verá que isto é muito parecido
+
+20
+00:00:59,860 --> 00:01:02,196
+com o código HTML
+que você está escrevendo.
+
+21
+00:01:02,229 --> 00:01:05,365
+É só HTML
+sem um estilo anexado.
+
+22
+00:01:05,399 --> 00:01:09,002
+Eu quis mostrar isso porque,
+por trás de toda página da web,
+
+23
+00:01:09,036 --> 00:01:11,438
+por mais bonita que seja,
+
+24
+00:01:11,471 --> 00:01:15,409
+é só HTML carregando
+todo o conteúdo.
+
+25
+00:01:15,442 --> 00:01:20,180
+O estilo, como o layout da coluna,
+cores, fontes,
+
+26
+00:01:20,214 --> 00:01:23,517
+tudo isso é especificado usando
+a linguagem CSS.
+
+27
+00:01:23,550 --> 00:01:26,787
+CSS significa
+"folhas de estilo em cascata".
+
+28
+00:01:26,820 --> 00:01:28,622
+O código CSS serve
+para especificar
+
+29
+00:01:28,655 --> 00:01:31,592
+a aparência de cada elemento
+da sua página.
+
+30
+00:01:31,625 --> 00:01:34,795
+Vou dar uma rápida introdução
+sobre CSS,
+
+31
+00:01:34,828 --> 00:01:38,332
+embora, para construir
+o app da web no fim da aula,
+
+32
+00:01:38,365 --> 00:01:40,367
+você usará
+uma biblioteca front-end
+
+33
+00:01:40,400 --> 00:01:43,103
+que faz a estilização CSS
+para você.
+
+34
+00:01:43,136 --> 00:01:45,672
+Esta é a página da web
+na qual estamos trabalhando.
+
+35
+00:01:45,706 --> 00:01:48,609
+Existem duas formas
+diferentes de escrever CSS:
+
+36
+00:01:48,642 --> 00:01:52,746
+CSS em linha e CSS escrito
+em uma folha de estilos.
+
+37
+00:01:52,779 --> 00:01:55,482
+Com CSS em linha,
+você especifica o estilo
+
+38
+00:01:55,516 --> 00:01:58,752
+dentro de uma tag,
+usando o atributo style.
+
+39
+00:01:58,785 --> 00:02:01,421
+Por exemplo, para mudar
+o primeiro parágrafo
+
+40
+00:02:01,455 --> 00:02:04,758
+para uma fonte em negrito,
+eu escreveria
+
+41
+00:02:04,791 --> 00:02:08,896
+style="font-weight:bold;".
+
+42
+00:02:08,929 --> 00:02:10,964
+Você pode ver a sintaxe aqui.
+
+43
+00:02:10,998 --> 00:02:14,768
+Digo o que quero mudar -
+no caso, a espessura da fonte -
+
+44
+00:02:14,801 --> 00:02:17,504
+e como quero mudar -
+quero que ela fique em negrito.
+
+45
+00:02:17,538 --> 00:02:20,641
+Depois, preciso separá-los
+com dois pontos
+
+46
+00:02:20,674 --> 00:02:23,443
+e, finalmente, terminar
+com ponto e vírgula.
+
+47
+00:02:23,477 --> 00:02:26,713
+Posso adicionar outras coisas aqui,
+por exemplo, color:red.
+
+48
+00:02:26,747 --> 00:02:31,084
+Estou adicionando outra regra
+ao parágrafo, e tudo fica vermelho.
+
+49
+00:02:31,118 --> 00:02:33,720
+Podemos fazer todo tipo de coisa
+para mudar o estilo.
+
+50
+00:02:33,754 --> 00:02:35,856
+Vou colocar referências
+abaixo do vídeo
+
+51
+00:02:35,889 --> 00:02:38,792
+para você ver todas as coisas
+que pode fazer.
+
+52
+00:02:38,825 --> 00:02:40,861
+Vou adicionar
+mais regras de estilo.
+
+53
+00:02:40,894 --> 00:02:43,530
+Por exemplo, aqui em body,
+
+54
+00:02:44,264 --> 00:02:45,966
+vou dizer
+
+55
+00:02:45,999 --> 00:02:49,469
+margin-left:20px;
+
+56
+00:02:49,503 --> 00:02:52,306
+margin-right:20px,
+
+57
+00:02:52,339 --> 00:02:55,108
+e vamos ver o que acontece.
+Observe
+
+58
+00:02:55,142 --> 00:02:58,879
+que ele comprimiu um pouco
+o meu conteúdo
+
+59
+00:02:58,912 --> 00:03:02,683
+para não vazar
+para o lado direito ou esquerdo.
+
+60
+00:03:02,716 --> 00:03:05,586
+Vamos descer
+para a tag de imagem, aqui,
+
+61
+00:03:05,619 --> 00:03:10,290
+e vamos deixar a imagem
+um pouco menor.
+
+62
+00:03:10,324 --> 00:03:14,862
+Vou até o link, aqui,
+
+63
+00:03:14,895 --> 00:03:17,030
+e vou dizer
+
+64
+00:03:17,064 --> 00:03:20,901
+style="text-decoration:none;".
+
+65
+00:03:20,934 --> 00:03:26,273
+Observe que ele removeu
+o sublinhado do link, aqui.
+
+66
+00:03:26,306 --> 00:03:29,309
+Você pode adicionar
+todo tipo de estilo.
+
+67
+00:03:29,343 --> 00:03:33,280
+Por exemplo,
+o que mais eu tinha aqui?
+
+68
+00:03:33,313 --> 00:03:35,382
+Este texto verde,
+eu poderia estilizá-lo
+
+69
+00:03:35,415 --> 00:03:39,385
+e dizer "color:green;".
+
+70
+00:03:39,418 --> 00:03:41,922
+Então, você pode fazer
+todo tipo de coisa.
+
+71
+00:03:41,955 --> 00:03:45,526
+Contudo, o problema
+de escrever CSS dessa forma
+
+72
+00:03:45,559 --> 00:03:50,664
+é que você precisa especificar
+o CSS para cada tag individual,
+
+73
+00:03:50,697 --> 00:03:52,466
+e isso é um pouco enfadonho,
+
+74
+00:03:52,499 --> 00:03:55,836
+além de não aproveitar
+tudo que o CSS pode fazer,
+
+75
+00:03:55,869 --> 00:03:59,773
+que é, essencialmente,
+separar o conteúdo em HTML
+
+76
+00:03:59,806 --> 00:04:02,409
+e fazer a estilização
+totalmente separada.
+
+77
+00:04:02,442 --> 00:04:04,411
+Vou recomeçar do zero
+
+78
+00:04:04,444 --> 00:04:08,048
+com o HTML original
+que não tinha estilização.
+
+79
+00:04:08,081 --> 00:04:11,185
+Uma forma alternativa
+de colocar o estilo
+
+80
+00:04:11,218 --> 00:04:15,589
+é aqui, com a folha de estilos.
+Então, vou até a tag head,
+
+81
+00:04:15,622 --> 00:04:20,494
+e crio este novo elemento
+chamado "style".
+
+82
+00:04:20,527 --> 00:04:23,597
+Agora posso adicionar
+regras CSS à folha de estilos,
+
+83
+00:04:23,630 --> 00:04:28,101
+para que ela fique separada
+do conteúdo HTML.
+
+84
+00:04:28,135 --> 00:04:31,972
+A sintaxe de uma folha de estilos
+é, primeiro, especificar
+
+85
+00:04:32,005 --> 00:04:36,043
+o tipo, a tag ou classe do elemento
+que você quer estilizar,
+
+86
+00:04:36,076 --> 00:04:38,946
+depois, escrever uma regra
+para o estilo.
+
+87
+00:04:38,979 --> 00:04:44,451
+Por exemplo, se eu quiser estilizar
+somente o parágrafo com ID p_top,
+
+88
+00:04:44,484 --> 00:04:49,923
+especifico assim: #p_top,
+
+89
+00:04:50,924 --> 00:04:54,428
+coloco chaves de abertura
+e fechamento,
+
+90
+00:04:54,461 --> 00:04:57,798
+e escrevo a regra de estilo
+dentro das chaves.
+
+91
+00:04:57,831 --> 00:05:01,268
+No caso, vou dizer
+font-weight:bold.
+
+92
+00:05:01,301 --> 00:05:02,769
+Observe que, agora,
+
+93
+00:05:02,803 --> 00:05:06,807
+o primeiro parágrafo está
+com a fonte em negrito.
+
+94
+00:05:06,840 --> 00:05:10,077
+Vamos adicionar mais regras
+só para você ver como é.
+
+95
+00:05:10,110 --> 00:05:14,114
+E se eu quiser estilizar
+a tag body?
+
+96
+00:05:14,147 --> 00:05:17,951
+É só escrever body
+para representar a tag body,
+
+97
+00:05:17,985 --> 00:05:21,021
+colocar as chaves de abertura
+e fechamento,
+
+98
+00:05:21,054 --> 00:05:25,692
+e posso especificar o que quiser,
+como margin-left:20px,
+
+99
+00:05:25,726 --> 00:05:28,295
+margin-right:20px.
+
+100
+00:05:28,328 --> 00:05:32,499
+E, de novo, ele comprime
+todo o texto do conteúdo
+
+101
+00:05:32,533 --> 00:05:35,669
+para não vazar para os lados.
+
+102
+00:05:35,702 --> 00:05:39,540
+Posso adicionar uma moldura,
+talvez adicionar padding,
+
+103
+00:05:39,573 --> 00:05:42,442
+para que não fique
+tudo grudado na moldura.
+
+104
+00:05:42,476 --> 00:05:45,279
+Veja que estou começando
+a estilizar tudo isso.
+
+105
+00:05:45,312 --> 00:05:49,016
+Quero estilizar a imagem
+para que não fique tão grande,
+
+106
+00:05:49,049 --> 00:05:52,886
+tirar os sublinhados
+dos links.
+
+107
+00:05:52,920 --> 00:05:54,388
+E, se você descer até o HTML,
+
+108
+00:05:54,421 --> 00:05:57,424
+lembre-se de que tenho aquela
+classe chamada "green_text".
+
+109
+00:05:57,457 --> 00:06:00,327
+Para adicionar estilo
+a uma classe,
+
+110
+00:06:00,360 --> 00:06:04,064
+uso a sintaxe "."
+seguido do nome da classe,
+
+111
+00:06:04,097 --> 00:06:08,035
+e vou mudar a cor para verde.
+
+112
+00:06:08,068 --> 00:06:10,737
+Comece a perceber as vantagens
+
+113
+00:06:10,771 --> 00:06:12,906
+de usar IDs e classes.
+
+114
+00:06:12,940 --> 00:06:16,710
+Por exemplo, com o ID
+no primeiro parágrafo,
+
+115
+00:06:16,743 --> 00:06:19,780
+consegui colocar
+só o primeiro parágrafo em negrito.
+
+116
+00:06:19,813 --> 00:06:25,018
+Com a classe green_text, consegui
+deixar só esta parte em verde,
+
+117
+00:06:25,052 --> 00:06:29,122
+e esta parte em verde, mas usando
+apenas uma regra de estilo.
+
+118
+00:06:29,156 --> 00:06:32,993
+Essa forma de escrever o estilo
+chama-se "folha de estilos interna",
+
+119
+00:06:33,026 --> 00:06:36,463
+porque está dentro
+do documento HTML.
+
+120
+00:06:36,497 --> 00:06:40,033
+Para deixar o código
+ainda mais limpo e modular,
+
+121
+00:06:40,067 --> 00:06:43,570
+você pode colocar o CSS
+em um arquivo separado.
+
+122
+00:06:43,604 --> 00:06:45,572
+A última etapa
+
+123
+00:06:45,606 --> 00:06:50,911
+é fazer o link para a folha
+de estilos no documento HTML.
+
+124
+00:06:50,944 --> 00:06:53,647
+Fazemos isso com a tag link.
+
+125
+00:06:53,680 --> 00:06:56,884
+E, aqui, no atributo href,
+
+126
+00:06:56,917 --> 00:07:00,220
+coloque o nome do arquivo,
+feche tudo,
+
+127
+00:07:00,254 --> 00:07:02,856
+e, agora, você tem
+a sua estilização CSS.
+
+128
+00:07:02,890 --> 00:07:05,792
+Agora o conteúdo
+do documento HTML
+
+129
+00:07:05,826 --> 00:07:07,995
+e a estilização
+do documento CSS
+
+130
+00:07:08,028 --> 00:07:09,963
+estão completamente separados.
+
+131
+00:07:09,997 --> 00:07:13,033
+Quero mencionar que sei
+que estou mostrando muitas coisas
+
+132
+00:07:13,066 --> 00:07:15,102
+em um ritmo muito acelerado,
+
+133
+00:07:15,135 --> 00:07:17,304
+mas o objetivo
+é se tornar proficiente,
+
+134
+00:07:17,337 --> 00:07:19,773
+não necessariamente
+especialista.
+
+135
+00:07:19,806 --> 00:07:21,675
+Logo, apresentarei
+algumas ferramentas
+
+136
+00:07:21,708 --> 00:07:23,944
+que facilitam um pouco
+o desenvolvimento web,
+
+137
+00:07:23,977 --> 00:07:27,681
+para você não precisar saber
+todas essas regras CSS.
+
+138
+00:07:27,714 --> 00:07:29,316
+Mas estou dando uma introdução
+
+139
+00:07:29,349 --> 00:07:32,186
+para você entender
+o que acontece nos bastidores.
+
+140
+00:07:32,219 --> 00:07:34,388
+A seguir, você vai praticar
+escrever CSS
+
+141
+00:07:34,421 --> 00:07:36,521
+e, em seguida,
+passaremos para JavaScript.
+

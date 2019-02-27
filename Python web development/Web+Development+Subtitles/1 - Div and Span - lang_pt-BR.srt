@@ -1,0 +1,146 @@
+1
+00:00:00,267 --> 00:00:04,838
+Vamos falar sobre como estruturar
+e organizar o código HTML.
+
+2
+00:00:04,872 --> 00:00:06,840
+Como você mesmo já vivenciou,
+
+3
+00:00:06,874 --> 00:00:11,378
+novas tags HTML são renderizadas
+uma após a outra.
+
+4
+00:00:11,411 --> 00:00:14,248
+Então, por exemplo,
+se eu usar uma tag de parágrafo,
+
+5
+00:00:14,281 --> 00:00:16,216
+depois outra tag de parágrafo,
+
+6
+00:00:16,250 --> 00:00:19,219
+elas serão renderizadas
+de cima para baixo.
+
+7
+00:00:19,253 --> 00:00:24,024
+Vou adicionar alguns links
+e parágrafos a este documento.
+
+8
+00:00:24,525 --> 00:00:29,463
+Observe que os links são
+renderizados um após o outro,
+
+9
+00:00:29,496 --> 00:00:31,899
+e os parágrafos são renderizados
+um após o outro,
+
+10
+00:00:31,932 --> 00:00:34,768
+na ordem em que escrevi
+o código.
+
+11
+00:00:34,801 --> 00:00:37,704
+Há uma tag chamada "div",
+abreviação de "divisão",
+
+12
+00:00:37,738 --> 00:00:40,107
+que é usada especificamente
+para agrupar
+
+13
+00:00:40,140 --> 00:00:42,976
+blocos grandes
+de conteúdo relacionado.
+
+14
+00:00:43,010 --> 00:00:46,280
+Essa tag permite selecionar
+partes específicas do seu documento
+
+15
+00:00:46,313 --> 00:00:50,751
+para adicionar estilos com CSS
+ou interações usando JavaScript.
+
+16
+00:00:50,784 --> 00:00:54,555
+Vou adicionar tags div para criar
+uma seção de links separada,
+
+17
+00:00:54,588 --> 00:00:58,258
+e outra seção em volta
+de todos os parágrafos de baixo.
+
+18
+00:00:58,292 --> 00:01:00,627
+Vou expandir
+para você ver melhor.
+
+19
+00:01:00,661 --> 00:01:05,399
+As tags div estão separando
+o conteúdo em grupos separados.
+
+20
+00:01:05,432 --> 00:01:07,734
+Há outra tag chamada "span",
+
+21
+00:01:07,768 --> 00:01:10,204
+que algumas pessoas confundem
+com a tag div.
+
+22
+00:01:10,237 --> 00:01:14,274
+Um elemento span separa
+um pequeno pedaço de conteúdo,
+
+23
+00:01:14,308 --> 00:01:16,610
+como no meio de um parágrafo.
+
+24
+00:01:16,643 --> 00:01:19,746
+Por exemplo, se você quisesse
+mudar a cor de uma palavra
+
+25
+00:01:19,780 --> 00:01:23,817
+em vez do parágrafo inteiro,
+você poderia usar uma tag span.
+
+26
+00:01:23,851 --> 00:01:26,820
+Vou adicionar uma aqui
+para você ver como é.
+
+27
+00:01:26,854 --> 00:01:31,091
+Observe que as tags div e span
+não estão mudando nada.
+
+28
+00:01:31,124 --> 00:01:34,995
+São apenas formas
+de separar código HTML.
+
+29
+00:01:35,028 --> 00:01:37,197
+Quando você for estilizar
+sua página da web,
+
+30
+00:01:37,231 --> 00:01:40,033
+as tags div e span
+farão mais sentido.
+

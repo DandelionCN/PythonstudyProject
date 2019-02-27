@@ -1,0 +1,130 @@
+1
+00:00:00,000 --> 00:00:05,699
+Por enquanto, no aplicativo,
+só tínhamos dados para os EUA
+
+2
+00:00:05,733 --> 00:00:06,899
+e uma reta.
+
+3
+00:00:06,933 --> 00:00:08,933
+Agora, eu fiz um gráfico
+
+4
+00:00:08,966 --> 00:00:12,666
+em que tenho todos os dados
+de países diferentes.
+
+5
+00:00:12,699 --> 00:00:16,499
+Vou mostrar como eu fiz isso,
+e não é tanto código assim.
+
+6
+00:00:16,533 --> 00:00:18,733
+Voltando
+para o espaço de trabalho,
+
+7
+00:00:18,766 --> 00:00:22,333
+tudo que fiz foi mudar um pouco
+do arquivo routes.py.
+
+8
+00:00:22,366 --> 00:00:25,666
+Este aqui é o código
+de que eu tinha falado,
+
+9
+00:00:25,699 --> 00:00:27,299
+em que eu tinha um gráfico 1
+
+10
+00:00:27,333 --> 00:00:32,066
+e estava usando dados dos EUA
+em x, y
+
+11
+00:00:32,099 --> 00:00:36,133
+e nos nomes desta lista.
+
+12
+00:00:36,166 --> 00:00:38,333
+Se eu descer aqui,
+
+13
+00:00:38,366 --> 00:00:39,733
+o que fiz agora
+
+14
+00:00:39,766 --> 00:00:42,399
+foi criar esta lista
+graph_one.
+
+15
+00:00:42,433 --> 00:00:46,666
+Estou iterando pelos dados
+
+16
+00:00:46,699 --> 00:00:49,166
+e, para cada país
+de que eu tenho dados,
+
+17
+00:00:49,199 --> 00:00:52,833
+estou anexando parte
+das visualizações
+
+18
+00:00:52,866 --> 00:00:55,133
+para esta lista graph_one.
+
+19
+00:00:55,166 --> 00:00:58,999
+Observe este código por um tempinho
+para entender o que eu fiz,
+
+20
+00:00:59,033 --> 00:01:01,266
+mas, essencialmente,
+é bem similar.
+
+21
+00:01:01,299 --> 00:01:04,566
+Ainda tem esta parte
+go.scatter aqui,
+
+22
+00:01:04,599 --> 00:01:06,466
+mas a diferença é
+
+23
+00:01:06,499 --> 00:01:11,133
+que eu continuo anexando novos
+a esta lista graph_one
+
+24
+00:01:11,166 --> 00:01:13,299
+para cada país
+nos conjuntos de dados.
+
+25
+00:01:13,333 --> 00:01:18,266
+Foi tudo que eu fiz
+para deixar esta visualização assim.
+
+26
+00:01:18,299 --> 00:01:22,199
+Em seguida, vou adicionar
+outras visualizações
+
+27
+00:01:22,233 --> 00:01:24,033
+e usar o Bootstrap
+
+28
+00:01:24,066 --> 00:01:26,566
+para o front-end
+parecer um pouco melhor.
+
