@@ -310,7 +310,7 @@ if __name__ == "__main__":
     print("==========================================================================")
     print("Better Tool,Better Future!Welcome to use Stock_Data_Capture tool!")
     print("--------------------------------------------------------------------------")
-    print("Author:Dandelion|Contact:490359939@qq.com|All rights reserved!")
+    print("Author:Dandelion|Contact:490**@qq.com|All rights reserved!")
     print("--------------------------------------------------------------------------")
     print("Attention Please:Make sure your file directory has no Chinese Characters!")
     print("==========================================================================")

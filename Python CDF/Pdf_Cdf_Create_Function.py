@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 import os
+import datetime
 
 
 def Pdf_Cdf_Create_Function(Input_kpidata_array_or_series):
@@ -21,6 +22,8 @@ def Pdf_Cdf_Create_Function(Input_kpidata_array_or_series):
 #     import numpy as np is needed
 #     import os is needed
 # ================================
+    figure=plt.figure(num=None, figsize=(8,4), dpi=200, facecolor='w', edgecolor='b')
+    #figsize must be less than 2^16 inches in each direction.the default figsize=(6.4, 4.8)
     hist, bin_edges = np.histogram(kpi_arr,bins=100,)
     #PDF图创建
     width = (bin_edges[1] - bin_edges[0]) * 1.0
@@ -41,7 +44,15 @@ def Pdf_Cdf_Create_Function(Input_kpidata_array_or_series):
     plt.title(' CDF & PDF By '+'Input_kpidata',fontsize=8)
     #plt.legend(title='Input_kpidata',loc='best',fontsize=8)
     plt.grid(b=True)
+    #保存生成的图标为制定格式的图片
+#    figure=plt.gcf()
+    date_cur=datetime.datetime.now().strftime("%Y%m%d")
+    figname_full = os.path.join(os.getcwd(),"CDF_PDF_Figure_"+date_cur+".png")
+    figure.savefig(figname_full)
+#    figure.savefig(figname_full,dpi=200,facecolor='w', edgecolor='w',papertype=None, format='png',transparent=False)
+    #显示图片
     plt.show()
+
 
 
 if __name__=="__main__":

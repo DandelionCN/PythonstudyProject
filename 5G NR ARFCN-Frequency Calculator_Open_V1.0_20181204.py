@@ -98,9 +98,9 @@ if __name__=="__main__":
     print('============================================================')
     print('| Welcome to use 5G NR Frequency<-->ARFCN Calculator!       |')
     print('| The Calculator is designed according to 3GPP 38.101-1/2!  |')
-#    print('| Author:ZHAO ZHONGXIANG|Contact:10157624@zte.com.cn!     |')
+#    print('| Author:ZHA **|Contact:***!     |')
 
-    print('| Author:Kevin|Contact:490359939@qq.com|All rights reserved!|' )
+    print('| Author:Kevin|Contact:490***9@qq.com|All rights reserved!|' )
     print('============================================================')
 #    print('Attention Please:Make sure your file directory has no Chinese Characters!')
    
