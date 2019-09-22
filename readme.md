@@ -1,6 +1,6 @@
 # git basic use method
 
-git add . "."	 #添加所有文件到仓库中
+git add . "."	 #添加所有文件到仓库中 
 
 git add "file name" 	#添加指定文件到仓库中
 
@@ -19,17 +19,23 @@ git config --list 	#查看配置信息
 git commit -am '修改 hello.php 文件'
 
 
-git commit、git push、git pull、 git fetch、git merge 的含义与区别
+# git commit、git push、git pull、 git fetch、git merge 的含义与区别
 
  git commit：是将本地修改过的文件提交到本地库中；
+ 
  git push：是将本地库中的最新信息发送给远程库；
+ 
  git pull：是从远程获取最新版本到本地，并自动merge；
+ 
  git fetch：是从远程获取最新版本到本地，不会自动merge；
+ 
  git merge：是用于从指定的commit(s)合并到当前分支，用来合并两个分支；
+ 
 $ git merge -b  // 指将 b 分支合并到当前分支
+
 git pull 相当于 git fetch + git merge。
 
-
+# Git 移除文件
 要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除，然后提交。可以用以下命令完成此项工作
 
 git rm <file>
