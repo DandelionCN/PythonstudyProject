@@ -55,10 +55,13 @@ def ProjectParameter_create_for_Spark():
     real_data=Final_sheet_data[usecols]
     date_today=datetime.datetime.now().strftime("%Y%m%d%H%m")
     with open(os.path.join(current_path,'Spark5G工参_'+date_today+'.txt'),'w',encoding='UTF-8') as outputfile:
-        real_data.to_string(outputfile)
+        real_data.to_string(outputfile,header=True, index=False, na_rep='NaN')
+    outputfile.close()
+
+    real_data.to_csv(os.path.join(current_path,'Spark5G工参_'+date_today+'.csv'),header=True, index=False,sep=',')
     return usecols
 
-
+#to_string(buf=None, columns=None, col_space=None, header=True, index=True, na_rep='NaN', formatters=None, float_format=None, sparsify=None, index_names=True, justify=None, max_rows=None, min_rows=None, max_cols=None, show_dimensions=False, decimal='.', line_width=None)
 
 if __name__=="__main__":
     cols=spark_ProjectParameter=ProjectParameter_create_for_Spark()
