@@ -1,4 +1,4 @@
-# git basic use method
+# Git basic use method
 - git add . "."	 #添加所有文件到仓库中   
 - git add "file name" 	#添加指定文件到仓库中   
 - git commit -m "备注信息说明" 	#提交备注信息   
@@ -33,7 +33,7 @@ git rm –r *
 
 5. git mv README  README.md   
 git mv 命令用于移动或重命名一个文件、目录、软连接。   
-
+---
 # Git brach
 - git branch -a 查看所有分支，含远程   
 - git branch 查看本地分支   
@@ -52,7 +52,6 @@ git mv 命令用于移动或重命名一个文件、目录、软连接。
 - get featch 下载远程origin/master更新   
 - git diff master origin/master 查看本地和远程库的区别   
 - get merge origin/master 合并远端更新到本地    
-
 ---
 # Git tags
 - git tag v1.0 -m "tag v1"  创建一个标签    
