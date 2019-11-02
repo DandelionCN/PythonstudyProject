@@ -32,4 +32,36 @@ git rm --cached <file>
 git rm –r * 
 
 5. git mv README  README.md   
-git mv 命令用于移动或重命名一个文件、目录、软连接。
+git mv 命令用于移动或重命名一个文件、目录、软连接。   
+
+# Git brach
+-git branch -a 查看所有分支，含远程   
+-git branch 查看本地分支   
+-git branch -r 查看远程分支   
+-git branch newbranch 创建新分支   
+-git branch -d oldbranch 删除分支oldbranch   
+-git push origin newbranch 把新分支同步到远程仓库   
+-git push origin :oldbranch 删除远程oldbranch分支   
+-git checkout -b newbranch 切换到另一分支，如果不存在则创建   
+-git checkout branch 切换到另一分支   
+-git clone 新项目 无论当前项目在什么分支，都是下载默认master分支   
+-git checkout master   
+-git merge anthorbranch   
+-git push origin maste 合并开发分支到master分支   
+-git pull尽量少使用，隐含了合并信息   
+-get featch 下载远程origin/master更新   
+-git diff master origin/master 查看本地和远程库的区别   
+-get merge origin/master 合并远端更新到本地    
+
+---
+# Git tags
+-git tag v1.0 -m "tag v1"  创建一个标签    
+-git push origin --tags    把所有标签同步到远程库    
+-git checkout v1.0    检出v1.0版本    
+-git reset --hard v1.0    使代码重置，回到v1.0。此功能慎用，后开发的代码会丢失    
+-git tag -d v1.0    删除标签v1.0    
+-git push origin :v1.0    删除远程库里标签    
+-git tag -l -n1    查看所有tag    
+
+
+
