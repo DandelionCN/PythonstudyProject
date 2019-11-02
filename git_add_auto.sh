@@ -5,3 +5,4 @@ read commit_info
 echo "the commit update information is:$commit_info"
 git commit -m "$commit_info"
 git push origin master
+echo "Update is commited successfully!"
