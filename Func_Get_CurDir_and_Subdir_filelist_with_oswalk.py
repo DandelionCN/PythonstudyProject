@@ -65,7 +65,7 @@ if __name__ == "__main__":
     print('Author:DandelionCN|Contact:*****@qq.com|All rights reserved!' )
     print('--------------------------------------------------------------------------')
     print('Attention Please:Make sure your file directory has no Chinese Characters!')
-    data_path = r"C:\Users\admin\Desktop\tt"  # 指定数据源存放路径
+    data_path = r"/home/dandelion/PythonstudyProject"  # 指定数据源存放路径
     filter_filetype = ".csv"  # 指定数据源过滤格式
     print("================================================")
     file_list = get_currentdir_and_subdir_filename(data_path, filter_filetype, 0)

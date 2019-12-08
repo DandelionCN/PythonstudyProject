@@ -1,9 +1,12 @@
-# -*- coding: utf-8 -*-
+#!/usr/bin/python3
+# -*- coding:utf-8 -*-
+
 """
 Spyder Editor
 
 This is a temporary script file.
 """
+
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 import pandas as pd

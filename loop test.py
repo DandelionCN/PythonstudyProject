@@ -12,5 +12,5 @@ while True:
 	except:
 		print("Invalid input!")
 	finally:
-		print("please try again!")
+		pass
 input("Press Enter kay to exit!")

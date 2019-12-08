@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 """
 Title:
@@ -57,7 +58,7 @@ if __name__ == "__main__":
     print('Author:DandelionCN|Contact:******@qq.com|All rights reserved!' )
     print('--------------------------------------------------------------------------')
     print('Attention Please:Make sure your file directory has no Chinese Characters!')
-    data_path = r"C:\Users\admin\Desktop\tt"
+    data_path = r"/home/dandelion/PythonstudyProject"
     filter_filetype = ".csv"
     print("================================================")
     file_list = get_currentdir_filename(data_path, filter_filetype, 0)

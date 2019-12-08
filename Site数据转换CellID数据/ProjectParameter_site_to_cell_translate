@@ -4,7 +4,8 @@
 Created on Mon Dec 22 22:24:00 2018
 
 @author: dandelion
-要求：第一列为gnbname，最后一列为以"/"连接的方位角组合列，如：20/150/300
+要求：工参所在sheet的名字为“gnb”（或者直接修改代码中默认sheet名称）；
+第一列为gnbname，最后一列为以"/"连接的方位角组合列，如：20/150/300
 """
 
 import xlrd
@@ -135,3 +136,4 @@ if __name__=="__main__":
 #
 # save_workbook.save("/home/dandelion/Cell Project Parameter.xlsx")
 # =============================================================================
+
