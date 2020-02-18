@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""
+the input file_directory named as [Source_Log_Exported_From_Spark] in the current path with the source python file
+~/Source_Log_Exported_From_Spark
+"""
 
 import pandas as pd
 import os
