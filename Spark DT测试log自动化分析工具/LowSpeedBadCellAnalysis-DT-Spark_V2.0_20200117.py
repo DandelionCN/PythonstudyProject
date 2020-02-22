@@ -32,25 +32,22 @@ def read_and_comb_data_from_spark_csv(spark_csv_dir):
     files_list = os.listdir(spark_csv_dir)
     csv_file_list = []
     file_num = 0
-    try:
-        for files in files_list:
-            if ".csv" in files:
-                df_read_from_csv = pd.read_csv(
-                    os.path.join(spark_csv_dir, files), header=0, encoding="gbk"
-                )
-                csv_file_list.append(df_read_from_csv)
-                file_num += 1
-        print("共读入{}个原始log!".format(file_num))
-        csv_comb = pd.concat(csv_file_list)
-        csv_comb.drop_duplicates(inplace=True)
-        csv_comb.dropna(how="all", inplace=True)
-        csv_comb.dropna(subset=["NR MAC Thr. DL [Mbps]"], inplace=True)
-        csv_comb.dropna(axis=1, how="all", inplace=True)
-        csv_comb = csv_comb[(~csv_comb["NR DMRS RSRP[dBm]"].isin(["-∞"]))]
-        csv_comb[["NR DMRS RSRP[dBm]"]] = csv_comb[["NR DMRS RSRP[dBm]"]].astype(float)
-        return csv_comb
-    except Exception:
-        print("RunError!{}中没有log文件".format(spark_csv_dir))
+    for files in files_list:
+        if ".csv" in files:
+            df_read_from_csv = pd.read_csv(
+                os.path.join(spark_csv_dir, files), header=0, encoding="gbk"
+            )
+            csv_file_list.append(df_read_from_csv)
+            file_num += 1
+    print("共读入{}个原始log!".format(file_num))
+    csv_comb = pd.concat(csv_file_list)
+    csv_comb.drop_duplicates(inplace=True)
+    csv_comb.dropna(how="all", inplace=True)
+    csv_comb.dropna(subset=["NR MAC Thr. DL [Mbps]"], inplace=True)
+    csv_comb.dropna(axis=1, how="all", inplace=True)
+    csv_comb = csv_comb[(~csv_comb["NR DMRS RSRP[dBm]"].isin(["-∞"]))]
+    csv_comb[["NR DMRS RSRP[dBm]"]] = csv_comb[["NR DMRS RSRP[dBm]"]].astype(float)
+    return csv_comb
 
 
 def data_process(csv_data_df):
@@ -162,7 +159,7 @@ def Low_Speed_Bad_Cell(DT_Log_Df):
 
 
 def export_df_to_multi_excel_sheet(save_excel_file, dict_sheet_name_df):
-#    讲多个dateframe数据导出到同一个Excel工作薄的不同sheet中
+    #    讲多个dateframe数据导出到同一个Excel工作薄的不同sheet中
     writer = pd.ExcelWriter(save_excel_file)
     for key in dict_sheet_name_df:
         print("正在导出数据", key)
